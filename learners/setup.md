@@ -227,7 +227,7 @@ Save with Ctrl+O, Enter, Ctrl+X.
 - Check your phone volume isn't muted
 - Try SMS option if push notification fails
 - Verify your phone number is correct in Pomona account settings
-- Contact Pomona IT if continuing to fail: 909-621-8061 or servicedesk@pomona.edu
+- Contact Pomona IT if continuing to fail: (909) 621-8061 or servicedesk@pomona.edu
 
 ### "Connection timeout" or "Network unreachable"
 
