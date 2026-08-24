@@ -27,7 +27,8 @@ life_cycle: 'stable'
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/pomona-college-hpc/intro-hpc'
+source: 'https://github.com/Pomona-College/hpc-intro'
+url: 'https://pomona-college.github.io/hpc-intro/'
 
 # Default branch of your lesson
 branch: 'main'
