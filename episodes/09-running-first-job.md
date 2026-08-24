@@ -42,6 +42,10 @@ Give you a terminal on a compute node for direct command execution.
 
 ## Anatomy of a SLURM Batch Script
 
+The script below is an **illustration to read, not to run** -- we'll walk through
+what each line means. You'll write and submit your own working script in the
+challenge at the end of this episode.
+
 ```bash
 #!/bin/bash
 #SBATCH --job-name=hello_hpc
@@ -53,7 +57,7 @@ Give you a terminal on a compute node for direct command execution.
 #SBATCH --output=%j_output.log
 
 module purge
-module load python/3.11.2
+module load miniconda3/py313_26.3.2-2
 
 echo "Host: $(hostname)"
 echo "Job ID: $SLURM_JOB_ID"
@@ -80,6 +84,8 @@ This first-job example uses the `short` partition because it's a quick test. For
 | `--gres` | GPU request | `gpu:1`, `gpu:2` |
 
 ## Submitting and Monitoring
+
+![The life of a batch job, from writing the script to collecting output.](fig/08-job-workflow.png){alt='Flow diagram of the SLURM job workflow. Write a job script my_job.sh, submit it with sbatch, the job waits in the SLURM queue as PENDING, the scheduler allocates resources, the job runs on a compute node as RUNNING, and when the job finishes it is either COMPLETED with output in slurm-JOBID.out or FAILED, in which case you check the error log.'}
 
 ### Submit with sbatch
 
@@ -176,7 +182,14 @@ sacct -j 12345
 Create and submit a batch job that runs a Python computation.
 
 **Steps**:
-1. Create the Python script:
+
+1. Move into your workshop directory (job output lands in the directory you
+   submit from):
+
+   ```bash
+   cd ~/workshop-0
+   ```
+2. Create the Python script:
    ```bash
    cat > ~/workshop-0/fibonacci.py << 'EOF'
    def fibonacci(n):
@@ -191,7 +204,7 @@ Create and submit a batch job that runs a Python computation.
        print(f"Fibonacci({i}) = {fibonacci(i)}")
    EOF
    ```
-2. Create the batch script:
+3. Create the batch script:
    ```bash
    cat > ~/workshop-0/fib_job.sh << 'EOF'
    #!/bin/bash
@@ -204,16 +217,16 @@ Create and submit a batch job that runs a Python computation.
    #SBATCH --output=%j_fib.log
 
    module purge
-   module load python/3.11.2
+   module load miniconda3/py313_26.3.2-2
 
    echo "Running Fibonacci calculation..."
    python ~/workshop-0/fibonacci.py
    echo "Done!"
    EOF
    ```
-3. Submit: `sbatch ~/workshop-0/fib_job.sh`
-4. Monitor: `squeue -u $USER`
-5. View output: `cat ~/workshop-0/*_fib.log`
+4. Submit: `sbatch fib_job.sh`
+5. Monitor: `squeue -u $USER`
+6. View output: `cat ~/workshop-0/*_fib.log`
 
 **Question**: What is Fibonacci(20)?
 
@@ -224,6 +237,8 @@ Create and submit a batch job that runs a Python computation.
 Fibonacci(20) = 6765
 
 The job should complete in seconds. Check with `sacct -j JOBID` and view the log file to confirm all Fibonacci numbers were printed.
+
+![Submitting the job and reading its log — it finishes so fast that `squeue` is already empty by the time you check.](fig/09-challenge-job-output.png){alt='Terminal transcript of sbatch submitting a batch job, an squeue listing with headers but no rows because the job already completed, and the log file contents listing Fibonacci values 1 through 20, ending with 6765 and Done.'}
 
 :::::::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::

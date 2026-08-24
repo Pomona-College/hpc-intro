@@ -22,7 +22,7 @@ By the end of this workshop, you will be able to:
 **Sagehen** (sagehen.hpc.pomona.edu) is Pomona College's research computing cluster managed by Information Technology Services (ITS). It features:
 
 - **12 AMD EPYC compute nodes**: 128 cores and 500 GB RAM each
-- **GPU-enabled nodes**: Sagehen has 11 GPUs across multiple nodes (4× NVIDIA A100 80 GB, 4× L40S 48 GB, 1× V100 16 GB, 2× A6000 48 GB; confirmed May 2026 — see Workshop 16 for full hardware breakdown)
+- **GPU-enabled nodes**: Sagehen has 10 GPUs across multiple nodes (4× NVIDIA A100 80 GB, 4× L40S 48 GB, 2× RTX PRO 6000 96 GB; confirmed May 2026 — see Workshop 16 for full hardware breakdown)
 - **Multiple storage systems**: Home directories (100 GB), lab storage (1 TB), and high-speed scratch space
 - **SLURM job scheduler**: Manage computational jobs efficiently across all users
 - **Lmod software environment**: A managed Lmod environment with hundreds of pre-built software modules

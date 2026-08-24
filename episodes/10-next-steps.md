@@ -34,6 +34,8 @@ srun --partition=short --time=01:00:00 --cpus-per-task=4 --mem=8G --pty bash
 
 This gives you a bash shell on a compute node where you can test code interactively without running on the head node.
 
+![A full edit-test cycle in an interactive session: the prompt changes from `sagehen` to compute node `a001` after `srun --pty bash`.](fig/10-interactive-srun-workflow.png){alt='A long terminal transcript. The batch script is shown with cat, an srun command with a ten-minute limit opens an interactive shell and the prompt changes to node a001, sbatch submits the job from there, ls shows the numbered log file, cat prints Fibonacci 1 through 20 ending in 6765 and Done, and exit returns to the head node prompt.'}
+
 ### Email Notifications
 
 Get notified when your job finishes:
@@ -42,6 +44,10 @@ Get notified when your job finishes:
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=username@pomona.edu
 ```
+
+![The Fibonacci batch script with the two mail directives added (students' addresses are on the mymail.pomona.edu domain).](fig/10-mail-directives-nano.png){alt='A syntax-highlighted batch script in a text editor. The SBATCH header for the fibonacci job on the short partition now includes mail-type END,FAIL and a mail-user line, above the module purge and miniconda3 load lines and the python command.'}
+
+![The email SLURM sends when the job ends — the subject line carries the job ID, name, run time, state, and exit code. Note it comes from the its-hpcmbx mailbox; don't reply to it.](fig/10-slurm-completion-email.png){alt='An email client showing a message from ITS High Performance Computing. The subject reads Slurm Job_id 37651, Name fibonacci, Ended, Run time zero seconds, COMPLETED, Exit Code 0. The message body is empty.'}
 
 ### Customizing Your Shell
 
@@ -110,7 +116,7 @@ module list
 
 | Task | Command |
 |------|---------|
-| Connect | `ssh username@sagehen.hpc.pomona.edu` |
+| Connect | `ssh <myusername>@sagehen.hpc.pomona.edu` |
 | Submit job | `sbatch script.sh` |
 | Check jobs | `squeue -u $USER` |
 | Job history | `sacct -u $USER` |
@@ -154,10 +160,10 @@ A good plan should include:
 #SBATCH --output=%j_output.log
 
 module purge
-module load python/3.11.2        # or whatever you need
+module load miniconda3/py313_26.3.2-2   # or whatever you need (check module avail)
 
 # Your research command here
-python my_analysis.py --input /bigdata/labname/data --output ~/results/
+python my_analysis.py --input /bigdata/lab/<labname>/data --output ~/results/
 ```
 
 Key considerations:
@@ -178,3 +184,6 @@ Key considerations:
 - Use `quota_check.sh` (not `du`) to check BeeGFS storage usage
 
 ::::::::::::::::::::::::::::::::::::::::::::::
+
+<!-- highlight <labname>/<myusername> placeholders in code blocks; remove if the varnish theme handles this natively -->
+<script>(function(){var CSS='.sh-placeholder{color:#c2410c;font-weight:700}[data-bs-theme="dark"] .sh-placeholder,html.dark .sh-placeholder{color:#fdba74}@media (prefers-color-scheme: dark){[data-bs-theme="auto"] .sh-placeholder{color:#fdba74}}';var RX=/<labname>|<myusername>/g;function firstMatch(el){var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),nodes=[],full='';while(w.nextNode()){nodes.push({n:w.currentNode,s:full.length});full+=w.currentNode.nodeValue;}RX.lastIndex=0;var m;while((m=RX.exec(full))){var s=m.index,e=s+m[0].length,inSpan=false,parts=[];for(var j=0;j<nodes.length;j++){var ns=nodes[j].s,ne=ns+nodes[j].n.nodeValue.length;if(ne<=s||ns>=e)continue;parts.push({node:nodes[j].n,a:Math.max(s-ns,0),b:Math.min(e-ns,nodes[j].n.nodeValue.length)});var p=nodes[j].n.parentNode;while(p&&p!==el){if(p.classList&&p.classList.contains('sh-placeholder')){inSpan=true;break;}p=p.parentNode;}}if(!inSpan&&parts.length)return parts;}return null;}function wrapParts(parts){for(var i=parts.length-1;i>=0;i--){var t=parts[i].node,txt=t.nodeValue,a=parts[i].a,b=parts[i].b;var span=document.createElement('span');span.className='sh-placeholder';span.textContent=txt.slice(a,b);var f=document.createDocumentFragment();if(a>0)f.appendChild(document.createTextNode(txt.slice(0,a)));f.appendChild(span);if(b<txt.length)f.appendChild(document.createTextNode(txt.slice(b)));t.parentNode.replaceChild(f,t);}}function run(){var st=document.createElement('style');st.textContent=CSS;document.head.appendChild(st);document.querySelectorAll('pre,code').forEach(function(el){var guard=0,parts;while((parts=firstMatch(el))&&guard++<500){wrapParts(parts);}});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}})();</script>

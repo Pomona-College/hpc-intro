@@ -44,29 +44,32 @@ Sagehen uses **Lmod** with 90+ pre-installed modules covering programming langua
 module avail
 
 # Search for a specific module
-module avail python
+module avail miniconda3
 
 # Show module details without loading
-module show python/3.11.2
+module show miniconda3/py313_26.3.2-2
 ```
+
+![The real `module avail` listing on Sagehen — miniconda3's versions are in the middle column, with `(D)` marking the default.](fig/08-module-avail-output.png){alt='Terminal output of module avail on Sagehen showing a long multi-column list of software modules under /opt/linux/rocky/8/modulefile, including anaconda3, cuda, matlab, openmpi, r, and three miniconda3 versions with py313_26.3.2-2 marked as the default.'}
 
 ### Loading and Unloading Modules
 
 ```bash
 # Load default Python
-module load python
+module load miniconda3
 
 # Load a specific version
-module load python/3.11.2
+module load miniconda3/py313_26.3.2-2
 
-# Load multiple modules at once
-module load python/3.11.2 gcc/11.3.0 openmpi/4.1.4
+# Load multiple modules at once (check `module avail` for the exact
+# names and versions installed on Sagehen)
+module load miniconda3/py313_26.3.2-2
 
 # Check what's loaded
 module list
 
 # Unload a specific module
-module unload python
+module unload miniconda3
 
 # Unload all modules
 module purge
@@ -81,21 +84,24 @@ Loading a module modifies environment variables (`PATH`, `LD_LIBRARY_PATH`, etc.
 echo $PATH
 # /usr/local/bin:/usr/bin:/bin:...
 
-module load python/3.11.2
+module load miniconda3/py313_26.3.2-2
 
 # After loading python
 echo $PATH
-# /opt/python/3.11.2/bin:/usr/local/bin:/usr/bin:/bin:...
+# /opt/linux/rocky/8/software/miniconda3/py313_26.3.2-2/bin:...
 ```
+
+![Before and after: loading the miniconda3 module prepends its bin directories to `$PATH`.](fig/08-module-load-path-change.png){alt='A terminal transcript comparing echo PATH before and after module load. After loading miniconda3/py313_26.3.2-2, PATH begins with that module's bin and condabin directories under /opt/linux/rocky/8/software.'}
 
 ### Module Families and Conflicts
 
 Some modules belong to the same **family**. Loading one auto-unloads the other:
 
 ```bash
-module load gcc/11.3.0
-module load intel/2021.4
-# Loading intel auto-unloaded gcc!
+# Loading a second version of the same package auto-swaps it
+module load cuda/11.8.0
+module load cuda/12.2.1
+# Lmod reports the swap: cuda/11.8.0 => cuda/12.2.1
 ```
 
 The same applies to Python versions -- only one can be active at a time.
@@ -112,7 +118,7 @@ Always start your job scripts with no modules loaded:
 
 # Always start fresh
 module purge
-module load python/3.11.2
+module load miniconda3/py313_26.3.2-2
 
 python my_analysis.py
 ```
@@ -147,24 +153,26 @@ export PATH=~/software/bin:$PATH
 Practice loading, switching, and purging modules.
 
 **Steps**:
-1. Load default Python: `module load python`
+
+1. Load default Python: `module load miniconda3`
 2. Check the version: `python --version`
 3. Switch to a different version:
    ```bash
-   module unload python
-   module load python/3.8.13
+   module unload miniconda3
+   module load miniconda3/py312_24.9.2-0
    python --version
    ```
 4. List loaded modules: `module list`
 5. Purge and reload:
    ```bash
    module purge
-   module load python/3.11.2
+   module load miniconda3/py313_26.3.2-2
    python --version
    module list
    ```
 
 **Questions**:
+
 - Which version loaded by default?
 - What happens after `module purge`?
 - Can you have two Python versions loaded at once?
@@ -173,11 +181,13 @@ Practice loading, switching, and purging modules.
 
 ## Solution
 
-- The default `module load python` loads the most recent stable version (likely 3.11.2)
+- The default `module load miniconda3` loads the most recent stable version
 - `module purge` removes all loaded modules; `module list` shows nothing
 - No, loading a second Python version auto-unloads the first (same module family)
 
 This demonstrates Lmod's ability to manage multiple versions cleanly.
+
+![The expected Challenge 1 flow: list, purge, and switch between miniconda3 versions.](fig/08-challenge-module-switching.png){alt='Terminal transcript of an Lmod session. module list shows miniconda3/py313_26.3.2-2 as the only loaded module; after module purge, module list reports no modules loaded; the user then loads miniconda3/py312_24.9.2-0 and echo PATH shows that version's bin directory first.'}
 
 :::::::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::

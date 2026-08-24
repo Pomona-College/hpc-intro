@@ -8,7 +8,7 @@ title: 'Quick Reference'
 
 | Command | Purpose |
 |---------|---------|
-| `ssh username@sagehen.hpc.pomona.edu` | Connect via SSH |
+| `ssh <myusername>@sagehen.hpc.pomona.edu` | Connect via SSH |
 | `exit` or `logout` | Disconnect from Sagehen |
 | https://ondemand.hpc.pomona.edu/ | Web portal (no SSH needed) |
 
@@ -42,34 +42,35 @@ title: 'Quick Reference'
 
 | Path | Purpose | Backup | Size |
 |------|---------|--------|------|
-| `/rhome/username` | Home directory | Yes | ~100 GB |
-| `/bigdata/labname` | Lab shared storage | Yes | 1 TB |
-| `/scratch/$USER` | Temporary job storage | No | Unlimited* |
+| `/rhome/<myusername>` | Home directory | Yes | ~100 GB |
+| `/bigdata/lab/<labname>` | Lab shared storage | Yes | 1 TB |
+| `/scratch` | Temporary job storage | No | No quota* |
 | `/tmpfs` | RAM disk (during jobs) | No | ~1 GB |
 
-*Auto-cleaned after 30 days
+*Deleted when your job completes -- copy results out before the job ends
 
 ### Checking Storage Usage
 
 | Command | Purpose |
 |---------|---------|
-| `du -sh ~` | Home directory size |
-| `du -sh ~/` *` | Breakdown by subdirectory |
-| `du -sh /bigdata/labname` | Lab storage size |
-| `quota -s` | Show quota information |
+| `quota_check.sh` | Usage vs. quota (use this, not plain `du`) |
+| `du -sh --apparent-size ~` | Approximate home directory size |
+| `du -sh --apparent-size /bigdata/lab/<labname>` | Approximate lab storage size |
+
+Note: on BeeGFS, plain `du` does not report quota usage correctly -- use `quota_check.sh`.
 
 ### Module System (Lmod)
 
 | Command | Purpose |
 |---------|---------|
 | `module avail` | List all available modules |
-| `module avail python` | Search for modules (e.g., python) |
-| `module load python` | Load default version |
-| `module load python/3.11.2` | Load specific version |
-| `module unload python` | Unload module |
+| `module avail miniconda3` | Search for modules (e.g., miniconda3) |
+| `module load miniconda3` | Load default version |
+| `module load miniconda3/py313_26.3.2-2` | Load specific version |
+| `module unload miniconda3` | Unload module |
 | `module purge` | Unload all modules |
 | `module list` | Show currently loaded modules |
-| `module show python` | Show module details |
+| `module show miniconda3` | Show module details |
 
 ### Job Submission & Management
 
@@ -130,7 +131,7 @@ title: 'Quick Reference'
 
 # Load modules needed
 module purge
-module load python/3.11.2
+module load miniconda3/py313_26.3.2-2
 
 # Run your analysis
 echo "Starting analysis..."
@@ -142,9 +143,9 @@ echo "Analysis complete!"
 
 | Partition | Max Time | Cores | GPUs | Best For |
 |-----------|----------|-------|------|----------|
-| short | 2 hours | 128 | 0 | Testing & debugging |
+| short | Shorter -- check `sinfo -p short` | 128 | 0 | Testing & debugging |
 | amd | 30 days | 128 | 0 | General compute |
-| gpu | 30 days | 128 | Up to 3 | GPU-accelerated work |
+| gpu | 30 days | 128 | Yes (per-account limits) | GPU-accelerated work |
 
 ### Environment Variables
 
@@ -172,7 +173,7 @@ alias du-home='du -sh ~'
 
 | Error | Solution |
 |-------|----------|
-| `sbatch: command not found` | SLURM not loaded; try `module load slurm` |
+| `sbatch: command not found` | You may be on a compute node or wrong host; run from the head node, or contact its-hpc@pomona.edu |
 | `Permission denied (publickey)` | Wrong username or password |
 | `Job timeout` | Increase `--time` in sbatch script |
 | `Out of memory` | Increase `--mem` in sbatch script |
@@ -185,7 +186,7 @@ alias du-home='du -sh ~'
 | HPC account problems | its-hpc@pomona.edu |
 | Technical issues | its-hpc@pomona.edu |
 | Sagehen access | its-hpc@pomona.edu |
-| Pomona IT general | 909-621-8600 |
+| Pomona IT general | 909-621-8061 / servicedesk@pomona.edu |
 | This workshop | Ask your instructor |
 
 ### Sagehen Hardware Summary
@@ -196,9 +197,9 @@ alias du-home='du -sh ~'
 - 30-day max job time
 
 **GPU Nodes (gpu partition):**
-- 5 nodes with NVIDIA GPUs
+- 10 GPUs total across the GPU nodes
 - 128 cores, 500 GB RAM each
-- A100 (80GB), L40S (48GB), V100 (16GB)
+- 4x A100 (80 GB), 4x L40S (48 GB), 2x RTX PRO 6000 (96 GB)
 
 **Head Node (sagehen.hpc.pomona.edu):**
 - 2 cores, 8 GB shared RAM
@@ -217,7 +218,10 @@ alias du-home='du -sh ~'
 
 ### More Information
 
-- [Sagehen cluster documentation](https://its.pomona.edu/hpc)
+- [Sagehen cluster documentation](https://www.pomona.edu/its/)
 - [SLURM documentation](https://slurm.schedmd.com/)
 - [Lmod module system](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod)
-- Episode 6: Running Your First Job for detailed sbatch tutorial
+- Episode 9: Running Your First Job for the detailed sbatch tutorial
+
+<!-- highlight <labname>/<myusername> placeholders in code blocks; remove if the varnish theme handles this natively -->
+<script>(function(){var CSS='.sh-placeholder{color:#c2410c;font-weight:700}[data-bs-theme="dark"] .sh-placeholder,html.dark .sh-placeholder{color:#fdba74}@media (prefers-color-scheme: dark){[data-bs-theme="auto"] .sh-placeholder{color:#fdba74}}';var RX=/<labname>|<myusername>/g;function firstMatch(el){var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),nodes=[],full='';while(w.nextNode()){nodes.push({n:w.currentNode,s:full.length});full+=w.currentNode.nodeValue;}RX.lastIndex=0;var m;while((m=RX.exec(full))){var s=m.index,e=s+m[0].length,inSpan=false,parts=[];for(var j=0;j<nodes.length;j++){var ns=nodes[j].s,ne=ns+nodes[j].n.nodeValue.length;if(ne<=s||ns>=e)continue;parts.push({node:nodes[j].n,a:Math.max(s-ns,0),b:Math.min(e-ns,nodes[j].n.nodeValue.length)});var p=nodes[j].n.parentNode;while(p&&p!==el){if(p.classList&&p.classList.contains('sh-placeholder')){inSpan=true;break;}p=p.parentNode;}}if(!inSpan&&parts.length)return parts;}return null;}function wrapParts(parts){for(var i=parts.length-1;i>=0;i--){var t=parts[i].node,txt=t.nodeValue,a=parts[i].a,b=parts[i].b;var span=document.createElement('span');span.className='sh-placeholder';span.textContent=txt.slice(a,b);var f=document.createDocumentFragment();if(a>0)f.appendChild(document.createTextNode(txt.slice(0,a)));f.appendChild(span);if(b<txt.length)f.appendChild(document.createTextNode(txt.slice(b)));t.parentNode.replaceChild(f,t);}}function run(){var st=document.createElement('style');st.textContent=CSS;document.head.appendChild(st);document.querySelectorAll('pre,code').forEach(function(el){var guard=0,parts;while((parts=firstMatch(el))&&guard++<500){wrapParts(parts);}});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}})();</script>

@@ -37,9 +37,12 @@ High-performance computing refers to using multiple powerful computers (nodes) t
 
 **Sagehen** (sagehen.hpc.pomona.edu) is Pomona College's research computing cluster. Named after a bird native to California's Sierra Nevada, Sagehen brings powerful computing resources to Pomona's research community.
 
+![Sagehen's architecture: researchers connect through the head node, which dispatches jobs to the compute and GPU partitions, all sharing BeeGFS storage over 100 Gb InfiniBand.](fig/01-cluster-architecture.png){alt='Diagram of the Sagehen HPC cluster. Researchers connect via SSH or the OnDemand web portal to the head node, sagehen.hpc.pomona.edu, which is for login and job submission only. Jobs are dispatched via sbatch or srun to the amd partition of 12 compute nodes with 128 AMD EPYC cores and 500 GB RAM each, or to the gpu partition with 10 GPUs total. A short partition serves quick tests and debugging. All nodes connect over 100 Gb InfiniBand to shared BeeGFS storage: /rhome, /bigdata, and /scratch.'}
+
 ### Who Should Use Sagehen?
 
 Sagehen is available to:
+
 - Faculty researchers and their students
 - Graduate students conducting research
 - Undergraduate researchers
@@ -54,6 +57,7 @@ If you're doing research that requires significant computation, Sagehen is avail
 **SLURM** (Simple Linux Utility for Resource Management) coordinates all job execution on Sagehen.
 
 **How It Works:**
+
 1. You write a job script describing what you want to run and what resources you need
 2. You submit the job to SLURM using `sbatch` or `srun`
 3. SLURM places your job in a queue and monitors resource availability
@@ -61,6 +65,7 @@ If you're doing research that requires significant computation, Sagehen is avail
 5. Your job completes and results are written to output files or your home directory
 
 **Why SLURM?**
+
 - **Fairness**: Ensures every researcher gets a turn using the cluster
 - **Efficiency**: Runs multiple jobs simultaneously on different nodes
 - **Reproducibility**: Your job runs the same way every time

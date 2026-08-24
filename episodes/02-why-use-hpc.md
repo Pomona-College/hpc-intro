@@ -50,10 +50,10 @@ exercises: 10
 
 ### GPU Nodes (gpu partition)
 
-- Multiple GPU-accelerated nodes
-- NVIDIA A100 GPUs (high-memory, latest generation)
-- NVIDIA L40S GPUs (tensor-optimized)
-- NVIDIA V100 GPUs (general-purpose GPU computing)
+- Multiple GPU-accelerated nodes with 10 GPUs in total
+- 4× NVIDIA A100 GPUs (80 GB, high-memory training)
+- 4× NVIDIA L40S GPUs (48 GB, tensor-optimized)
+- 2× NVIDIA RTX PRO 6000 Blackwell GPUs (96 GB)
 - Each node also has 128 CPU cores + 500 GB RAM
 - Maximum job time: 30 days
 
@@ -81,8 +81,8 @@ Sagehen has multiple storage locations, each with different purposes:
 
 | Location | Quota | Backup | Persistence | Use Case |
 |----------|-------|--------|-------------|----------|
-| `/rhome/username` | ~100 GB | Daily | Persistent | Code, config, small results |
-| `/bigdata/labname` | 1 TB/lab | Daily | Persistent | Lab datasets, shared files |
+| `/rhome/<myusername>` | ~100 GB | Daily | Persistent | Code, config, small results |
+| `/bigdata/lab/<labname>` | 1 TB/lab | Daily | Persistent | Lab datasets, shared files |
 | `/scratch/...` | None | No | Temporary (deleted when job completes) | Large intermediate files |
 | `/tmpfs` | ~1 GB/job | No | Temporary (deleted when job ends) | Ultra-fast RAM-backed I/O |
 
@@ -91,6 +91,7 @@ Sagehen has multiple storage locations, each with different purposes:
 ## Resource Limits per Account
 
 Each user account has limits to ensure fair sharing:
+
 - Per-account CPU core, GPU, and job queue limits apply
 - Storage quotas: `/bigdata` shares a single 1 TB lab quota with `/rhome` (BeeGFS)
 - Contact its-hpc@pomona.edu if you need higher limits for a specific project
@@ -125,6 +126,7 @@ Write down a few sentences about why (or why not) HPC would be useful for this p
 ## Solution
 
 Your answer should discuss:
+
 - The size of data being processed
 - The computational time required
 - Whether the problem can be parallelized (run in parallel on multiple cores)
@@ -145,3 +147,6 @@ For example:
 - Contact its-hpc@pomona.edu for help or to request higher resource limits
 
 ::::::::::::::::::::::::::::::::::::::::::::::
+
+<!-- highlight <labname>/<myusername> placeholders in code blocks; remove if the varnish theme handles this natively -->
+<script>(function(){var CSS='.sh-placeholder{color:#c2410c;font-weight:700}[data-bs-theme="dark"] .sh-placeholder,html.dark .sh-placeholder{color:#fdba74}@media (prefers-color-scheme: dark){[data-bs-theme="auto"] .sh-placeholder{color:#fdba74}}';var RX=/<labname>|<myusername>/g;function firstMatch(el){var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),nodes=[],full='';while(w.nextNode()){nodes.push({n:w.currentNode,s:full.length});full+=w.currentNode.nodeValue;}RX.lastIndex=0;var m;while((m=RX.exec(full))){var s=m.index,e=s+m[0].length,inSpan=false,parts=[];for(var j=0;j<nodes.length;j++){var ns=nodes[j].s,ne=ns+nodes[j].n.nodeValue.length;if(ne<=s||ns>=e)continue;parts.push({node:nodes[j].n,a:Math.max(s-ns,0),b:Math.min(e-ns,nodes[j].n.nodeValue.length)});var p=nodes[j].n.parentNode;while(p&&p!==el){if(p.classList&&p.classList.contains('sh-placeholder')){inSpan=true;break;}p=p.parentNode;}}if(!inSpan&&parts.length)return parts;}return null;}function wrapParts(parts){for(var i=parts.length-1;i>=0;i--){var t=parts[i].node,txt=t.nodeValue,a=parts[i].a,b=parts[i].b;var span=document.createElement('span');span.className='sh-placeholder';span.textContent=txt.slice(a,b);var f=document.createDocumentFragment();if(a>0)f.appendChild(document.createTextNode(txt.slice(0,a)));f.appendChild(span);if(b<txt.length)f.appendChild(document.createTextNode(txt.slice(b)));t.parentNode.replaceChild(f,t);}}function run(){var st=document.createElement('style');st.textContent=CSS;document.head.appendChild(st);document.querySelectorAll('pre,code').forEach(function(el){var guard=0,parts;while((parts=firstMatch(el))&&guard++<500){wrapParts(parts);}});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}})();</script>

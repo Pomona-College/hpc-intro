@@ -26,6 +26,8 @@ A **partition** in SLURM is a logical grouping of compute nodes with shared char
 
 Think of partitions like different sections of a library: fiction, non-fiction, reference. Each section is organized for its purpose.
 
+![How Sagehen's partitions fit into the cluster: the head node dispatches jobs to the amd and gpu partitions, with the short partition for quick tests.](fig/01-cluster-architecture.png){alt='Diagram of the Sagehen HPC cluster. Researchers connect via SSH or the OnDemand web portal to the head node, which dispatches jobs via sbatch or srun to the amd partition of 12 compute nodes with 128 AMD EPYC cores and 500 GB RAM each, or the gpu partition with 10 GPUs total. A short partition serves quick tests and debugging with a shorter walltime. All nodes share BeeGFS storage over 100 Gb InfiniBand.'}
+
 ### The "amd" Partition (Standard Compute)
 
 The primary general-purpose partition for most research.
@@ -46,11 +48,13 @@ For research requiring GPU acceleration.
 - **CPUs**: 128 cores per node, 500 GB RAM
 - **GPUs**:
 
-| GPU Type | GPU Memory | Strength |
-|----------|------------|----------|
-| NVIDIA A100 | 80 GB each | Excellent for training |
-| NVIDIA L40S | 48 GB | Tensor-optimized / inference |
-| NVIDIA V100 | 16 GB | General-purpose GPU computing |
+| GPU Type | Count | GPU Memory | Strength |
+|----------|-------|------------|----------|
+| NVIDIA A100 | 4 | 80 GB each | Excellent for training |
+| NVIDIA L40S | 4 | 48 GB each | Tensor-optimized / inference |
+| NVIDIA RTX PRO 6000 | 2 | 96 GB each | Largest memory on the cluster (Blackwell) |
+
+That's **10 GPUs in total** across the gpu partition.
 
 - **Maximum job duration**: 720 hours (30 days)
 
@@ -61,6 +65,7 @@ For research requiring GPU acceleration.
 ## GPU Allocation Matters
 
 Request only the GPUs you need:
+
 - Deep learning: Usually 1-2 GPUs per job
 - Multi-GPU training: 2-4 GPUs (if your code supports it)
 - Standard molecular dynamics: 1 GPU
@@ -100,7 +105,7 @@ Example output:
 PARTITION  AVAIL  TIMELIMIT   NODES  STATE
 amd           up 30-00:00:00     12  alloc
 gpu           up 30-00:00:00      4  alloc
-short         up    4:00:00      4  idle
+short         up    2:00:00      4  idle
 ```
 
 (The exact `short` partition walltime limit may differ — always check `sinfo -p short` for current values.)
@@ -116,11 +121,13 @@ short         up    4:00:00      4  idle
 Query the cluster to understand its configuration.
 
 **Steps**:
+
 1. View partition information: `sinfo -l`
 2. View node details: `sinfo -N -l`
 3. Check the head node CPU: `lscpu | head -20`
 
 **Questions**:
+
 - How many nodes are in the "amd" partition?
 - What is the maximum walltime for the amd partition?
 - How many cores does a compute node have?
@@ -135,6 +142,10 @@ Query the cluster to understand its configuration.
 
 All standard compute nodes on Sagehen have identical configurations.
 
+![Real `sinfo -l` and `sinfo -N -l` output: the three partitions and per-node cores and memory.](fig/06-sinfo-partitions-nodes.png){alt='Terminal output of two sinfo commands on Sagehen. The partition view lists amd and gpu with a 30-day time limit and short with a 2-hour limit. The node view lists a001 through a012 with 128 CPUs and roughly 512 GB of memory each, plus five gpu nodes, one of which is down.'}
+
+![`lscpu` on the head node — note it reports 64 threads on dual AMD EPYC 7313 chips, not the 128 cores of a compute node.](fig/06-lscpu-head-node.png){alt='Output of lscpu piped to head, reporting x86_64 architecture, 64 online CPUs from two sockets of 16 cores with two threads per core, vendor AuthenticAMD, and the model name AMD EPYC 7313 16-Core Processor.'}
+
 :::::::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::
 
@@ -143,7 +154,7 @@ All standard compute nodes on Sagehen have identical configurations.
 - Partitions group nodes by hardware type and enforce time/resource limits
 - Sagehen has three partitions: `amd` (general purpose), `gpu` (GPU-accelerated), and `short` (quick / test / debug jobs with a shorter walltime)
 - Each compute node has 128 AMD EPYC cores and 500 GB RAM
-- GPU partition offers A100, L40S, and V100 GPUs
+- GPU partition offers 10 GPUs: A100, L40S, and RTX PRO 6000
 - Use `sinfo` to check partition status, node states, and available resources
 - Maximum job time: 720 hours (30 days) on `amd` and `gpu`; check `sinfo -p short` for the `short` partition limit
 

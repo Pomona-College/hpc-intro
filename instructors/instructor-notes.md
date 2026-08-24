@@ -25,7 +25,7 @@ Workshop 0 is designed as an introductory workshop for researchers with no prior
 
 ## Episode Breakdown & Timing
 
-### Episode 1: What is HPC? (45 min teaching + 15 min exercises)
+### Episodes 1-2: What is HPC? / Why Use HPC? (45 min teaching + 15 min exercises)
 
 **Learning Objectives:**
 - Students understand when and why HPC is useful
@@ -56,7 +56,7 @@ Workshop 0 is designed as an introductory workshop for researchers with no prior
 
 **Checkpoint:** Students should be able to articulate why their research needs HPC.
 
-### Episode 2: Connecting to Sagehen (30 min teaching + 20 min exercises)
+### Episode 3: Connecting to Sagehen (30 min teaching + 20 min exercises)
 
 **Learning Objectives:**
 - Students successfully SSH to Sagehen
@@ -95,7 +95,7 @@ Workshop 0 is designed as an introductory workshop for researchers with no prior
 
 **Checkpoint:** All students can successfully SSH and see the prompt.
 
-### Episode 3: Navigating the Filesystem (40 min teaching + 20 min exercises)
+### Episodes 4-5: Navigating the Filesystem / Files and Directories (40 min teaching + 20 min exercises)
 
 **Learning Objectives:**
 - Students navigate between directories confidently
@@ -129,7 +129,7 @@ Workshop 0 is designed as an introductory workshop for researchers with no prior
 
 **Checkpoint:** Students have created ~/workshop-0/ and understand home vs scratch.
 
-### Episode 4: Cluster Architecture (35 min teaching + 15 min exercises)
+### Episodes 6-7: Cluster Architecture / Nodes and Partitions (35 min teaching + 15 min exercises)
 
 **Learning Objectives:**
 - Students understand partitions and resource allocation
@@ -161,7 +161,7 @@ Workshop 0 is designed as an introductory workshop for researchers with no prior
 
 **Checkpoint:** Students can run `sinfo` and explain which partition they'd use.
 
-### Episode 5: Software Modules (30 min teaching + 20 min exercises)
+### Episode 8: Software Modules (30 min teaching + 20 min exercises)
 
 **Learning Objectives:**
 - Students understand why module systems exist
@@ -193,7 +193,7 @@ Workshop 0 is designed as an introductory workshop for researchers with no prior
 
 **Checkpoint:** Students can load Python, check version, unload, and explain why.
 
-### Episode 6: Running Your First Job (40 min teaching + 25 min exercises)
+### Episode 9: Running Your First Job (40 min teaching + 25 min exercises)
 
 **Learning Objectives:**
 - Students successfully submit a job with `sbatch`
@@ -233,6 +233,18 @@ Workshop 0 is designed as an introductory workshop for researchers with no prior
 - Checking output: 5 min
 
 **Checkpoint:** Every student has submitted a job and seen output.
+
+### Episode 10: Next Steps (10 min teaching + 5 min exercises)
+
+**Learning Objectives:**
+- Students know where to go after this workshop
+- Students can start an interactive session with `srun --pty bash`
+
+**Teaching Tips:**
+- Demo an interactive `srun` session so students see the compute-node prompt
+- Point to Workshop 9 (SLURM Job Scheduling) as the natural follow-on
+- Have students draft the skeleton batch script for their own research project
+- End on the support channels: its-hpc@pomona.edu
 
 ## Overall Teaching Strategy
 
@@ -276,24 +288,24 @@ Some learners may have prior Linux/HPC experience:
 
 ```
 8:00-8:10      Welcome & introductions
-8:10-9:00      Episode 1 (What is HPC) + challenges
-9:00-10:00     Episode 2 (Connecting) + live SSH
+8:10-9:00      Episodes 1-2 (What is HPC / Why Use HPC) + challenges
+9:00-10:00     Episode 3 (Connecting) + live SSH
 10:00-10:30    Break
-10:30-11:20    Episode 3 (Filesystem) + challenges
-11:20-12:00    Episode 4 (Cluster Architecture) + challenges
+10:30-11:20    Episodes 4-5 (Filesystem / Files & Directories) + challenges
+11:20-12:00    Episodes 6-7 (Cluster Architecture / Nodes & Partitions) + challenges
 12:00-1:00     Lunch
-1:00-2:00      Episode 5 (Modules) + challenges
-2:00-3:00      Episode 6 (First Job) + live sbatch
-3:00-3:30      Buffer/Q&A/Wrap-up
+1:00-2:00      Episode 8 (Modules) + challenges
+2:00-3:00      Episode 9 (First Job) + live sbatch
+3:00-3:30      Episode 10 (Next Steps) + Q&A/Wrap-up
 ```
 
 ## Quick Version (2.5 hours)
 
 If shorter on time:
 
-- Skip Episode 3 (filesystem) or do briefly
-- Combine Episodes 4-5 into one focused session
-- Emphasize Episode 6 (job submission is the goal)
+- Skip Episodes 4-5 (filesystem) or do briefly
+- Combine Episodes 6-8 into one focused session
+- Emphasize Episode 9 (job submission is the goal)
 - Use setup.md for pre-workshop filesystem learning
 
 ## Troubleshooting During Teaching
@@ -365,7 +377,7 @@ Observe learners:
 
 - **Workshop 9** (SLURM Job Scheduling): More advanced job control
 - **Other Carpentries workshops**: Linux shell, Git, Python, R
-- **Sagehen documentation**: https://its.pomona.edu/hpc
+- **Sagehen documentation**: https://www.pomona.edu/its/
 
 ## Resources for Instructors
 

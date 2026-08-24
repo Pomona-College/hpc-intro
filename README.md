@@ -9,11 +9,15 @@ This workshop introduces the fundamental concepts of high-performance computing 
 ## Episodes
 
 1. **What is HPC?**: Define high-performance computing, understand cluster components, and learn why HPC matters for research
-2. **Connecting to Sagehen**: Set up SSH access and use OnDemand web portal for secure cluster connection
-3. **Navigating the Filesystem**: Explore cluster directories, understand storage organization, and manage research data
-4. **Cluster Architecture**: Learn about head nodes, compute nodes, and different hardware resources available
-5. **Software Modules**: Discover how to load and use software packages on the cluster
-6. **Running Your First Job**: Submit an interactive job and observe computation in action
+2. **Why Use HPC?**: Recognize when an HPC cluster is the right tool and survey Sagehen's hardware and storage
+3. **Connecting to Sagehen**: Set up SSH access, DUO authentication, and the OnDemand web portal
+4. **Navigating the Filesystem**: Explore cluster directories, understand storage organization, and check quotas
+5. **Files and Directories**: Create and manage files, organize research work, and set permissions
+6. **Cluster Architecture**: Learn about partitions and Sagehen's hardware specifications
+7. **Nodes and Partitions**: Match jobs to the right partition and understand SLURM resource allocation
+8. **Software Modules**: Discover how to load and use software packages with Lmod
+9. **Running Your First Job**: Write, submit, and monitor a SLURM batch job
+10. **Next Steps**: Interactive jobs, email notifications, and the rest of the workshop series
 
 ## Prerequisites
 
@@ -37,7 +41,7 @@ Researchers new to HPC, including undergraduate students, graduate students, and
 
 ## Duration
 
-Approximately 2.5 to 3 hours including hands-on exercises.
+Approximately 3.5 to 4 hours including hands-on exercises (a 2 to 2.5 hour abbreviated version is described in the instructor notes).
 
 ## Technical Requirements
 
