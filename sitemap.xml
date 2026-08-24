@@ -40,6 +40,12 @@
     <loc>https://pomona-college.github.io/hpc-intro/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://pomona-college.github.io/hpc-intro/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://pomona-college.github.io/hpc-intro/images.html</loc>
+  </url>
+  <url>
     <loc>https://pomona-college.github.io/hpc-intro/index.html</loc>
   </url>
   <url>
@@ -82,13 +88,31 @@
     <loc>https://pomona-college.github.io/hpc-intro/instructor/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://pomona-college.github.io/hpc-intro/instructor/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://pomona-college.github.io/hpc-intro/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://pomona-college.github.io/hpc-intro/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://pomona-college.github.io/hpc-intro/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://pomona-college.github.io/hpc-intro/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://pomona-college.github.io/hpc-intro/instructor/profiles.html</loc>
   </url>
   <url>
     <loc>https://pomona-college.github.io/hpc-intro/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://pomona-college.github.io/hpc-intro/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://pomona-college.github.io/hpc-intro/key-points.html</loc>
   </url>
   <url>
     <loc>https://pomona-college.github.io/hpc-intro/profiles.html</loc>
