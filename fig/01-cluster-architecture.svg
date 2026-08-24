@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" width="900" height="640" font-family="Arial, Helvetica, sans-serif" role="img">
+  <title>Sagehen cluster architecture</title>
+  <desc>Researchers connect via SSH or OnDemand to the head node, which submits jobs to 12 AMD compute nodes or GPU nodes, all sharing BeeGFS storage over 100 Gb InfiniBand</desc>
+  <defs>
+    <filter id="sh" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arr" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#003366"/>
+    </marker>
+  </defs>
+
+  <!-- Researchers -->
+  <g filter="url(#sh)">
+    <rect x="330" y="14" width="240" height="52" rx="8" fill="#003366" stroke="#003366" stroke-width="2"/>
+    <text x="450" y="36" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">Researchers</text>
+    <text x="450" y="55" text-anchor="middle" fill="#fff" font-size="12">SSH or OnDemand web portal</text>
+  </g>
+
+  <path d="M 450,66 L 450,92" fill="none" stroke="#003366" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- Head node -->
+  <g filter="url(#sh)">
+    <rect x="295" y="96" width="310" height="66" rx="8" fill="#004B87" stroke="#003366" stroke-width="2"/>
+    <text x="450" y="119" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">Head Node</text>
+    <text x="450" y="137" text-anchor="middle" fill="#fff" font-size="12">sagehen.hpc.pomona.edu</text>
+    <text x="450" y="153" text-anchor="middle" fill="#D4A843" font-size="11" font-weight="bold">Login &amp; job submission only — never run jobs here</text>
+  </g>
+
+  <!-- Arrows to partitions -->
+  <path d="M 380,162 Q 240,190 225,222" fill="none" stroke="#003366" stroke-width="1.8" marker-end="url(#arr)"/>
+  <path d="M 520,162 Q 660,190 675,222" fill="none" stroke="#003366" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="270" y="196" fill="#003366" font-size="11" font-style="italic">sbatch / srun</text>
+  <text x="576" y="196" fill="#003366" font-size="11" font-style="italic">sbatch / srun</text>
+
+  <!-- amd partition -->
+  <g filter="url(#sh)">
+    <rect x="60" y="228" width="330" height="180" rx="10" fill="#EAF1F7" stroke="#004B87" stroke-width="2"/>
+    <rect x="60" y="228" width="330" height="34" rx="10" fill="#004B87"/>
+    <rect x="60" y="248" width="330" height="14" fill="#004B87"/>
+    <text x="225" y="250" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">amd partition — Compute Nodes</text>
+    <text x="225" y="290" text-anchor="middle" fill="#003366" font-size="13" font-weight="bold">12 nodes (a001 – a012)</text>
+    <text x="225" y="314" text-anchor="middle" fill="#003366" font-size="13">128 AMD EPYC cores per node</text>
+    <text x="225" y="336" text-anchor="middle" fill="#003366" font-size="13">500 GB RAM per node</text>
+    <text x="225" y="360" text-anchor="middle" fill="#003366" font-size="13">Max job time: 30 days</text>
+    <text x="225" y="388" text-anchor="middle" fill="#666" font-size="11" font-style="italic">General-purpose research computing</text>
+  </g>
+
+  <!-- gpu partition -->
+  <g filter="url(#sh)">
+    <rect x="510" y="228" width="330" height="180" rx="10" fill="#EAF1F7" stroke="#004B87" stroke-width="2"/>
+    <rect x="510" y="228" width="330" height="34" rx="10" fill="#004B87"/>
+    <rect x="510" y="248" width="330" height="14" fill="#004B87"/>
+    <text x="675" y="250" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">gpu partition — GPU Nodes</text>
+    <text x="675" y="290" text-anchor="middle" fill="#003366" font-size="13" font-weight="bold">11 GPUs total</text>
+    <text x="675" y="314" text-anchor="middle" fill="#003366" font-size="13">4&#215; A100 80 GB &#8226; 4&#215; L40S 48 GB</text>
+    <text x="675" y="336" text-anchor="middle" fill="#003366" font-size="13">2&#215; RTX PRO 6000 96 GB &#8226; 1&#215; V100 16 GB</text>
+    <text x="675" y="360" text-anchor="middle" fill="#003366" font-size="13">128 cores + 500 GB RAM per node</text>
+    <text x="675" y="388" text-anchor="middle" fill="#666" font-size="11" font-style="italic">Machine learning &amp; GPU-accelerated work</text>
+  </g>
+
+  <!-- short partition note -->
+  <g filter="url(#sh)">
+    <rect x="290" y="428" width="320" height="46" rx="8" fill="#D4A843" stroke="#004B87" stroke-width="2"/>
+    <text x="450" y="448" text-anchor="middle" fill="#000" font-size="12" font-weight="bold">short partition — quick tests &amp; debugging</text>
+    <text x="450" y="465" text-anchor="middle" fill="#000" font-size="11">shorter walltime — check sinfo -p short</text>
+  </g>
+
+  <!-- Arrows to storage -->
+  <path d="M 225,408 Q 240,470 330,516" fill="none" stroke="#003366" stroke-width="1.8" marker-end="url(#arr)"/>
+  <path d="M 675,408 Q 660,470 570,516" fill="none" stroke="#003366" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="180" y="480" fill="#003366" font-size="11" font-style="italic">100 Gb InfiniBand</text>
+  <text x="620" y="480" fill="#003366" font-size="11" font-style="italic">100 Gb InfiniBand</text>
+
+  <!-- Shared storage -->
+  <g filter="url(#sh)">
+    <rect x="200" y="512" width="500" height="112" rx="10" fill="#EAF1F7" stroke="#004B87" stroke-width="2"/>
+    <rect x="200" y="512" width="500" height="32" rx="10" fill="#003366"/>
+    <rect x="200" y="530" width="500" height="14" fill="#003366"/>
+    <text x="450" y="533" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Shared Storage — BeeGFS parallel filesystem</text>
+    <text x="450" y="566" text-anchor="middle" fill="#003366" font-size="13">/rhome — 100 GB per user, backed up</text>
+    <text x="450" y="588" text-anchor="middle" fill="#003366" font-size="13">/bigdata — shares 1 TB lab quota with /rhome, backed up</text>
+    <text x="450" y="610" text-anchor="middle" fill="#003366" font-size="13">/scratch — fast SSD, deleted when job completes</text>
+  </g>
+</svg>

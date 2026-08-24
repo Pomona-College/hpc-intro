@@ -1,0 +1,93 @@
+#------------------------------------------------------------
+# Values for this lesson.
+#------------------------------------------------------------
+
+# Which carpentry is this (swc, dc, lc, or cp)?
+# swc: Software Carpentry
+# dc: Data Carpentry
+# lc: Library Carpentry
+# cp: Carpentries (to use for instructor training for instance)
+# incubator: The Carpentries Incubator
+carpentry: 'incubator'
+
+# Overall title for pages.
+title: 'Introduction to HPC Systems — Pomona College HPC Workshop Series'
+description: 'Your first steps on Sagehen: connecting over SSH with DUO, navigating the filesystem, loading modules, and submitting a first SLURM job.'
+
+# Date the lesson was created (YYYY-MM-DD, this is empty by default)
+created: '2025-03-06'
+
+# Comma-separated list of keywords for the lesson
+keywords: 'Pomona College, HPC, research computing, Sagehen, cluster computing, job scheduling, modules'
+
+# Life cycle stage of the lesson
+# possible values: pre-alpha, alpha, beta, stable
+life_cycle: 'stable'
+
+# License of the lesson
+license: 'CC-BY 4.0'
+
+# Link to the source repository for this lesson
+source: 'https://github.com/Pomona-College/hpc-intro'
+url: 'https://pomona-college.github.io/hpc-intro/'
+
+# Default branch of your lesson
+branch: 'main'
+
+# Who to contact if there are any issues
+contact: 'its-hpc@pomona.edu'
+
+# Navigation ------------------------------------------------
+#
+# Use the following menu items to specify the order of
+# individual pages in each dropdown section. Leave blank to
+# include all pages in the folder.
+#
+# Example -------------
+#
+# episodes:
+# - introduction.md
+# - first-steps.md
+#
+# learners:
+# - setup.md
+#
+# instructors:
+# - instructor-notes.md
+#
+# profiles:
+# - one-learner.md
+# - another-learner.md
+
+# Order of episodes in your lesson
+episodes:
+- 01-what-is-hpc.md
+- 02-why-use-hpc.md
+- 03-connecting-to-sagehen.md
+- 04-navigating-filesystem.md
+- 05-files-and-directories.md
+- 06-cluster-architecture.md
+- 07-nodes-and-partitions.md
+- 08-software-modules.md
+- 09-running-first-job.md
+- 10-next-steps.md
+
+# Information for Learners
+learners:
+- setup.md
+- reference.md
+
+# Information for Instructors
+instructors:
+- instructor-notes.md
+
+# Learner Profiles
+profiles:
+- learner-profiles.md
+
+# Customisation ---------------------------------------------
+#
+# This space below is where custom yaml items (e.g. pinning
+# sandpaper and varnish versions) should live
+
+
