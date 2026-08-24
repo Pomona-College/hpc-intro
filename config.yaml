@@ -12,6 +12,7 @@ carpentry: 'incubator'
 
 # Overall title for pages.
 title: 'Introduction to HPC Systems — Pomona College HPC Workshop Series'
+description: 'Your first steps on Sagehen: connecting over SSH with DUO, navigating the filesystem, loading modules, and submitting a first SLURM job.'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: '2025-03-06'
