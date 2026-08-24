@@ -186,7 +186,7 @@ alias du-home='du -sh ~'
 | HPC account problems | its-hpc@pomona.edu |
 | Technical issues | its-hpc@pomona.edu |
 | Sagehen access | its-hpc@pomona.edu |
-| Pomona IT general | 909-621-8061 / servicedesk@pomona.edu |
+| Pomona IT general | (909) 621-8061 / servicedesk@pomona.edu |
 | This workshop | Ask your instructor |
 
 ### Sagehen Hardware Summary

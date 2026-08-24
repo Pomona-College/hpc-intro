@@ -104,7 +104,7 @@ After entering your Pomona password, you'll see a DUO prompt:
 
 ![A real login from Windows PowerShell: password prompt, the DUO menu, then verification with `whoami` and `hostname`.](fig/03-ssh-duo-login.png){alt='A PowerShell window running ssh to sagehen.hpc.pomona.edu. After the password prompt, a Duo two-factor menu offers Duo Push, a phone call, or SMS passcodes; option 1 is chosen and login succeeds. The commands whoami and hostname then return the username and sagehen.hpc.pomona.edu.'}
 
-If DUO fails, contact Pomona IT Help Desk: 909-621-8061 or servicedesk@pomona.edu.
+If DUO fails, contact Pomona IT Help Desk: (909) 621-8061 or servicedesk@pomona.edu.
 
 ## The OnDemand Web Portal
 
