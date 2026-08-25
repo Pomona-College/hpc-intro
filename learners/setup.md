@@ -44,7 +44,7 @@ SSH clients allow you to securely connect to Sagehen. Most systems have SSH buil
 
 :::::::::::::::::::::::::::::::::::::::::::::::
 
-:::::::::::::::: solution
+::::::::::::::::  spoiler
 
 ### macOS
 
@@ -64,7 +64,7 @@ macOS includes SSH built-in. No installation needed!
 
 :::::::::::::::::::::::::
 
-:::::::::::::::: solution
+::::::::::::::::  spoiler
 
 ### Windows 10/11
 
@@ -101,7 +101,7 @@ For a graphical interface:
 
 :::::::::::::::::::::::::
 
-:::::::::::::::: solution
+::::::::::::::::  spoiler
 
 ### Linux
 
