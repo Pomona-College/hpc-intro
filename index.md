@@ -87,3 +87,8 @@ This workshop follows The Carpentries approach to teaching, emphasizing hands-on
 
 **Ready to get started?** Begin with [Episode 1: What is HPC?](episodes/01-what-is-hpc.md).
 
+## Acknowledgments
+
+Developed by **Andrew Wilson**, Director of Research Computing and Digital
+Scholarship at Pomona College, with **Andrei Motchenko**, who tested, edited
+and produced screenshots for the workshop series.
