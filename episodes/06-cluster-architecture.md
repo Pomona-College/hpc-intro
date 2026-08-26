@@ -6,7 +6,7 @@ exercises: 5
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- What are partitions and why does Sagehen have three?
+- What are partitions and why does Sagehen HPC have three?
 - What hardware is in each partition?
 - How do I view cluster status?
 
@@ -26,7 +26,7 @@ A **partition** in SLURM is a logical grouping of compute nodes with shared char
 
 Think of partitions like different sections of a library: fiction, non-fiction, reference. Each section is organized for its purpose.
 
-![How Sagehen's partitions fit into the cluster: the head node dispatches jobs to the amd and gpu partitions, with the short partition for quick tests.](fig/01-cluster-architecture.png){alt='Diagram of the Sagehen HPC cluster. Researchers connect via SSH or the OnDemand web portal to the head node, which dispatches jobs via sbatch or srun to the amd partition of 12 compute nodes with 128 AMD EPYC cores and 500 GB RAM each, or the gpu partition with 10 GPUs total. A short partition serves quick tests and debugging with a shorter walltime. All nodes share BeeGFS storage over 100 Gb InfiniBand.'}
+![How Sagehen HPC's partitions fit into the cluster: the head node dispatches jobs to the amd and gpu partitions, with the short partition for quick tests.](fig/01-cluster-architecture.png){alt='Diagram of the Sagehen HPC cluster. Researchers connect via SSH or the OnDemand web portal to the head node, which dispatches jobs via sbatch or srun to the amd partition of 12 compute nodes with 128 AMD EPYC cores and 500 GB RAM each, or the gpu partition with 10 GPUs total. A short partition serves quick tests and debugging with a shorter walltime. All nodes share BeeGFS storage over 100 Gb InfiniBand.'}
 
 ### The "amd" Partition (Standard Compute)
 
@@ -116,7 +116,7 @@ short         up    2:00:00      4  idle
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: Exploring Sagehen's Partitions
+## Challenge 1: Exploring Sagehen HPC's Partitions
 
 Query the cluster to understand its configuration.
 

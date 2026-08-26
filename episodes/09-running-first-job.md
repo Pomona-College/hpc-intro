@@ -7,7 +7,7 @@ exercises: 15
 :::::::::::::::::::::::::::::::::::::: questions
 
 - What is a batch script?
-- How do I submit a job to Sagehen?
+- How do I submit a job to Sagehen HPC?
 - How do I monitor my job and retrieve output?
 
 ::::::::::::::::::::::::::::::::::::::::::::::

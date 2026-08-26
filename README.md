@@ -4,7 +4,7 @@ Pomona College HPC Workshop Series
 
 ## Overview
 
-This workshop introduces the fundamental concepts of high-performance computing (HPC) and provides hands-on experience accessing Sagehen, Pomona College's research computing cluster. Learners will understand cluster architecture, connect securely via SSH, navigate the filesystem, and submit their first computational job.
+This workshop introduces the fundamental concepts of high-performance computing (HPC) and provides hands-on experience accessing Sagehen HPC, Pomona College's research computing cluster. Learners will understand cluster architecture, connect securely via SSH, navigate the filesystem, and submit their first computational job.
 
 ## Episodes
 

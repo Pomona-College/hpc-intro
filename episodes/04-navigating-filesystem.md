@@ -6,7 +6,7 @@ exercises: 10
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- How is the Sagehen filesystem organized?
+- How is the Sagehen HPC filesystem organized?
 - What are the different storage spaces and what are they for?
 - How do I check my storage quota?
 
@@ -21,11 +21,11 @@ exercises: 10
 
 :::::::::::::::::::::::::::::::::::::::::::::::
 
-## Sagehen's Storage Architecture
+## Sagehen HPC's Storage Architecture
 
 Sagehen uses a BeeGFS parallel filesystem connected via 100 Gb Infiniband. It has multiple storage systems, each designed for specific purposes.
 
-![Sagehen's storage hierarchy: persistent gold tiers at the top, encrypted storage for RESTRICTED data in the middle, and fast temporary tiers at the bottom.](fig/storage-architecture.png){alt='Diagram of the HPC storage hierarchy with five storage types. /rhome home directory and /bigdata/lab lab shared storage share a 1 TB quota, are backed up, and hold PUBLIC and PROPRIETARY data. gocryptfs encrypted storage on /rhome or /bigdata uses AES-256-GCM encryption and is required for RESTRICTED data. /scratch is fast temporary SSD storage deleted when the job completes. /tmpfs is RAM-backed, fastest, deleted when the job ends, and limited in capacity.'}
+![Sagehen HPC's storage hierarchy: persistent gold tiers at the top, encrypted storage for RESTRICTED data in the middle, and fast temporary tiers at the bottom.](fig/storage-architecture.png){alt='Diagram of the HPC storage hierarchy with five storage types. /rhome home directory and /bigdata/lab lab shared storage share a 1 TB quota, are backed up, and hold PUBLIC and PROPRIETARY data. gocryptfs encrypted storage on /rhome or /bigdata uses AES-256-GCM encryption and is required for RESTRICTED data. /scratch is fast temporary SSD storage deleted when the job completes. /tmpfs is RAM-backed, fastest, deleted when the job ends, and limited in capacity.'}
 
 ### Storage Location Overview
 
@@ -155,7 +155,7 @@ If you're approaching your quota, consider:
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: Explore Sagehen's Storage
+## Challenge 1: Explore Sagehen HPC's Storage
 
 Connect to Sagehen and explore the filesystem.
 

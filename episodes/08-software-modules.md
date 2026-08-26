@@ -6,7 +6,7 @@ exercises: 10
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- Why can't I just use any software on Sagehen?
+- Why can't I just use any software on Sagehen HPC?
 - What is the module system?
 - How do I find, load, and unload software modules?
 - What if I need software that's not installed?
@@ -33,7 +33,7 @@ On a personal computer, you install software globally. On a shared cluster with 
 
 A **module system** allows users to load and unload software dynamically, so multiple versions coexist without conflict.
 
-## Lmod: Sagehen's Module Manager
+## Lmod: Sagehen HPC's Module Manager
 
 Sagehen uses **Lmod** with 90+ pre-installed modules covering programming languages, compilers, scientific libraries, bioinformatics tools, and more.
 
@@ -50,7 +50,7 @@ module avail miniconda3
 module show miniconda3/py313_26.3.2-2
 ```
 
-![The real `module avail` listing on Sagehen — miniconda3's versions are in the middle column, with `(D)` marking the default.](fig/08-module-avail-output.png){alt='Terminal output of module avail on Sagehen showing a long multi-column list of software modules under /opt/linux/rocky/8/modulefile, including anaconda3, cuda, matlab, openmpi, r, and three miniconda3 versions with py313_26.3.2-2 marked as the default.'}
+![The real `module avail` listing on Sagehen HPC — miniconda3's versions are in the middle column, with `(D)` marking the default.](fig/08-module-avail-output.png){alt='Terminal output of module avail on Sagehen showing a long multi-column list of software modules under /opt/linux/rocky/8/modulefile, including anaconda3, cuda, matlab, openmpi, r, and three miniconda3 versions with py313_26.3.2-2 marked as the default.'}
 
 ### Loading and Unloading Modules
 

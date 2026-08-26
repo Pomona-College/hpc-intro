@@ -7,7 +7,7 @@ exercises: 10
 :::::::::::::::::::::::::::::::::::::: questions
 
 - How do I create, copy, move, and delete files?
-- How should I organize my work on Sagehen?
+- How should I organize my work on Sagehen HPC?
 - What are file permissions and how do I change them?
 
 ::::::::::::::::::::::::::::::::::::::::::::::
@@ -210,7 +210,7 @@ You created 4 directories total: `workshop-0` (main) plus `data`, `results`, `sc
 
 The command `ls -R workshop-0` shows the entire tree, including the `test.txt` file you created.
 
-![What Challenge 1 looks like when it works: the workshop-0 tree with its three subdirectories and test file.](fig/05-challenge-project-structure.png){alt='A terminal transcript creating the data, results, and scripts directories under workshop-0 with mkdir -p, with pwd printing the home workshop-0 path. A test.txt containing Hello Sagehen is created and displayed, ls -lah lists the contents, and ls -R shows the recursive tree.'}
+![What Challenge 1 looks like when it works: the workshop-0 tree with its three subdirectories and test file.](fig/05-challenge-project-structure.png){alt='A terminal transcript creating the data, results, and scripts directories under workshop-0 with mkdir -p, with pwd printing the home workshop-0 path. A test.txt containing Hello Sagehen HPC is created and displayed, ls -lah lists the contents, and ls -R shows the recursive tree.'}
 
 :::::::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::

@@ -7,7 +7,7 @@ exercises: 10
 :::::::::::::::::::::::::::::::::::::: questions
 
 - When do I need HPC for my research?
-- What hardware does Sagehen provide?
+- What hardware does Sagehen HPC provide?
 - What are the resource limits on Sagehen?
 
 ::::::::::::::::::::::::::::::::::::::::::::::
@@ -39,7 +39,7 @@ exercises: 10
 - You're running molecular dynamics, climate models, or other simulations
 - You need specialized hardware like GPUs
 
-## Sagehen's Hardware at a Glance
+## Sagehen HPC's Hardware at a Glance
 
 ### Compute Nodes (amd partition)
 
@@ -98,7 +98,7 @@ Each user account has limits to ensure fair sharing:
 
 :::::::::::::::::::::::::::::::::::::::::::::::
 
-## Your First HPC Experience on Sagehen
+## Your First HPC Experience on Sagehen HPC
 
 Over the next episodes, you will:
 

@@ -75,7 +75,7 @@ Reload with `source ~/.bashrc`.
 The Pomona College HPC Workshop Series covers many advanced topics:
 
 - **SLURM Job Scheduling**: Advanced batch scripting, job arrays, dependencies, GPU workflows
-- **Data Transfer and Management**: Moving data to/from Sagehen with scp, rsync, Globus
+- **Data Transfer and Management**: Moving data to/from Sagehen HPC with scp, rsync, Globus
 - **Security and Access**: SSH keys, data classification, encrypted storage
 - **OnDemand Portal**: Graphical access, Jupyter, RStudio on the cluster
 - **Domain-Specific Workshops**: R, Python, bioinformatics, and more
