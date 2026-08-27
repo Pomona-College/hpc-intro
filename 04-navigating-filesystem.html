@@ -207,7 +207,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="03-connecting-to-sagehen.html">3. Connecting to Sagehen</a>
+        <a href="03-connecting-to-sagehen.html">3. Connecting to Sagehen HPC</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -226,7 +226,7 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#sagehens-storage-architecture">Sagehen’s Storage Architecture</a></li>
+        <ul><li><a href="#sagehen-hpcs-storage-architecture">Sagehen HPC’s Storage Architecture</a></li>
 <li><a href="#essential-navigation-commands">Essential Navigation Commands</a></li>
 <li><a href="#checking-your-storage-usage">Checking Your Storage Usage</a></li>
         </ul></div><!--/div.accordion-body-->
@@ -338,7 +338,7 @@
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="03-connecting-to-sagehen.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Connecting to Sagehen...
+          Previous: Connecting to Sagehen HPC...
         </a>
         <a class="chapter-link float-end" href="05-files-and-directories.html" rel="next">
           Next: Files and Directories...
@@ -347,7 +347,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Navigating the Filesystem</h1>
-        <p>Last updated on 2026-08-24 |
+        <p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-intro/edit/main/episodes/04-navigating-filesystem.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -366,7 +366,7 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>How is the Sagehen filesystem organized?</li>
+<ul><li>How is the Sagehen HPC filesystem organized?</li>
 <li>What are the different storage spaces and what are they for?</li>
 <li>How do I check my storage quota?</li>
 </ul></div>
@@ -385,11 +385,11 @@
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="sagehens-storage-architecture">Sagehen’s Storage Architecture<a class="anchor" aria-label="anchor" href="#sagehens-storage-architecture"></a></h2>
+<section><h2 class="section-heading" id="sagehen-hpcs-storage-architecture">Sagehen HPC’s Storage Architecture<a class="anchor" aria-label="anchor" href="#sagehen-hpcs-storage-architecture"></a></h2>
 <hr class="half-width"><p>Sagehen uses a BeeGFS parallel filesystem connected via 100 Gb
 Infiniband. It has multiple storage systems, each designed for specific
 purposes.</p>
-<figure><img src="fig/storage-architecture.png" alt="Diagram of the HPC storage hierarchy with five storage types. /rhome home directory and /bigdata/lab lab shared storage share a 1 TB quota, are backed up, and hold PUBLIC and PROPRIETARY data. gocryptfs encrypted storage on /rhome or /bigdata uses AES-256-GCM encryption and is required for RESTRICTED data. /scratch is fast temporary SSD storage deleted when the job completes. /tmpfs is RAM-backed, fastest, deleted when the job ends, and limited in capacity." class="figure mx-auto d-block"><div class="figcaption">Sagehen’s storage hierarchy: persistent gold
+<figure><img src="fig/storage-architecture.png" alt="Diagram of the HPC storage hierarchy with five storage types. /rhome home directory and /bigdata/lab lab shared storage share a 1 TB quota, are backed up, and hold PUBLIC and PROPRIETARY data. gocryptfs encrypted storage on /rhome or /bigdata uses AES-256-GCM encryption and is required for RESTRICTED data. /scratch is fast temporary SSD storage deleted when the job completes. /tmpfs is RAM-backed, fastest, deleted when the job ends, and limited in capacity." class="figure mx-auto d-block"><div class="figcaption">Sagehen HPC’s storage hierarchy: persistent gold
 tiers at the top, encrypted storage for RESTRICTED data in the middle,
 and fast temporary tiers at the bottom.</div>
 </figure><div class="section level3">
@@ -577,13 +577,14 @@ shared pool usage on top, your per-user usage below.</div>
 <code>mv results /bigdata/lab/&lt;labname&gt;/</code>
 </li>
 <li>Contacting <a href="mailto:its-hpc@pomona.edu" class="email">its-hpc@pomona.edu</a> for additional storage</li>
-</ol><div id="challenge-1-explore-sagehens-storage" class="callout challenge">
+</ol><div id="challenge-1-explore-sagehen-hpcs-storage" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1-explore-sagehens-storage" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Explore Sagehen’s Storage</h3>
+<div id="challenge-1-explore-sagehen-hpcs-storage" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Explore Sagehen HPC’s
+Storage</h3>
 <div class="callout-content">
 <p>Connect to Sagehen and explore the filesystem.</p>
 <p><strong>Steps</strong>:</p>
@@ -607,7 +608,7 @@ shared pool usage on top, your per-user usage below.</div>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul><li>Your home directory should be
 <code>/rhome/&lt;myusername&gt;</code>
@@ -661,7 +662,7 @@ any links that you are not going to use.
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="03-connecting-to-sagehen.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Connecting to Sagehen...
+          Previous: Connecting to Sagehen HPC...
         </a>
         <a class="chapter-link float-end" href="05-files-and-directories.html" rel="next">
           Next: Files and Directories...
@@ -706,14 +707,14 @@ any links that you are not going to use.
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "Pomona College, HPC, research computing, Sagehen, cluster computing, job scheduling, modules",
+  "keywords": "Pomona College, HPC, research computing, Sagehen HPC, cluster computing, job scheduling, modules",
   "name": "Navigating the Filesystem",
   "creativeWorkStatus": "active",
   "url": "https://pomona-college.github.io/hpc-intro/04-navigating-filesystem.html",
   "identifier": "https://pomona-college.github.io/hpc-intro/04-navigating-filesystem.html",
   "dateCreated": "2025-03-06",
-  "dateModified": "2026-08-24",
-  "datePublished": "2026-08-26"
+  "dateModified": "2026-08-27",
+  "datePublished": "2026-08-27"
 }
 
   </script><script>

@@ -207,7 +207,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="03-connecting-to-sagehen.html">3. Connecting to Sagehen</a>
+        <a href="03-connecting-to-sagehen.html">3. Connecting to Sagehen HPC</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -348,7 +348,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Understanding Nodes and Partitions</h1>
-        <p>Last updated on 2026-08-24 |
+        <p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-intro/edit/main/episodes/07-nodes-and-partitions.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -398,7 +398,7 @@ storage, and processors</li>
 node</li>
 <li>
 <strong>Core</strong>: An individual processing unit within a socket
-(128 per node on Sagehen)</li>
+(128 per node on Sagehen HPC)</li>
 <li>
 <strong>Thread</strong>: A logical processing unit (some CPUs
 support hyperthreading)</li>
@@ -462,7 +462,7 @@ Use the <strong>short</strong> partition (shorter walltime limit, check
 <li>
 <strong>Everything else (production CPU jobs)</strong> -&gt; Use the
 <strong>amd</strong> partition</li>
-</ol><figure><img src="fig/07-partition-comparison.png" alt="Three-column comparison of Sagehen partitions. The amd default partition has 12 nodes a001 through a012 with 128 AMD EPYC cores and 500 GB RAM per node, a max walltime of 720 hours or 30 days, and is best for long CPU jobs, simulations, data processing, and multi-node MPI. The gpu partition has 10 GPUs: four A100 80 GB, four L40S 48 GB, and two RTX PRO 6000 96 GB, with a max walltime of 720 hours, best for machine learning, CUDA code, and GPU-accelerated computing. The short partition is for quick jobs and debugging with a shorter max walltime; check sinfo -p short." class="figure mx-auto d-block"><div class="figcaption">Side-by-side comparison of the three partitions
+</ol><figure><img src="fig/07-partition-comparison.png" alt="Three-column comparison of Sagehen HPC partitions. The amd default partition has 12 nodes a001 through a012 with 128 AMD EPYC cores and 500 GB RAM per node, a max walltime of 720 hours or 30 days, and is best for long CPU jobs, simulations, data processing, and multi-node MPI. The gpu partition has 10 GPUs: four A100 80 GB, four L40S 48 GB, and two RTX PRO 6000 96 GB, with a max walltime of 720 hours, best for machine learning, CUDA code, and GPU-accelerated computing. The short partition is for quick jobs and debugging with a shorter max walltime; check sinfo -p short." class="figure mx-auto d-block"><div class="figcaption">Side-by-side comparison of the three partitions
 and what each is best for.</div>
 </figure></div>
 <div class="section level3">
@@ -631,14 +631,14 @@ any links that you are not going to use.
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "Pomona College, HPC, research computing, Sagehen, cluster computing, job scheduling, modules",
+  "keywords": "Pomona College, HPC, research computing, Sagehen HPC, cluster computing, job scheduling, modules",
   "name": "Understanding Nodes and Partitions",
   "creativeWorkStatus": "active",
   "url": "https://pomona-college.github.io/hpc-intro/07-nodes-and-partitions.html",
   "identifier": "https://pomona-college.github.io/hpc-intro/07-nodes-and-partitions.html",
   "dateCreated": "2025-03-06",
-  "dateModified": "2026-08-24",
-  "datePublished": "2026-08-26"
+  "dateModified": "2026-08-27",
+  "datePublished": "2026-08-27"
 }
 
   </script><script>

@@ -207,7 +207,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="03-connecting-to-sagehen.html">3. Connecting to Sagehen</a>
+        <a href="03-connecting-to-sagehen.html">3. Connecting to Sagehen HPC</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -263,7 +263,7 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#why-modules-the-problem-they-solve">Why Modules? The Problem They Solve</a></li>
-<li><a href="#lmod-sagehens-module-manager">Lmod: Sagehen’s Module Manager</a></li>
+<li><a href="#lmod-sagehen-hpcs-module-manager">Lmod: Sagehen HPC’s Module Manager</a></li>
 <li><a href="#requesting-new-software">Requesting New Software</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -347,7 +347,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Software Modules Basics</h1>
-        <p>Last updated on 2026-08-24 |
+        <p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-intro/edit/main/episodes/08-software-modules.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -368,7 +368,7 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>Why can’t I just use any software on Sagehen?</li>
+<ul><li>Why can’t I just use any software on Sagehen HPC?</li>
 <li>What is the module system?</li>
 <li>How do I find, load, and unload software modules?</li>
 <li>What if I need software that’s not installed?</li>
@@ -400,7 +400,7 @@ cluster with hundreds of researchers, this creates conflicts:</p>
 <li>Some code compiles best with GCC 9; other code needs GCC 11</li>
 </ul><p>A <strong>module system</strong> allows users to load and unload
 software dynamically, so multiple versions coexist without conflict.</p>
-</section><section><h2 class="section-heading" id="lmod-sagehens-module-manager">Lmod: Sagehen’s Module Manager<a class="anchor" aria-label="anchor" href="#lmod-sagehens-module-manager"></a></h2>
+</section><section><h2 class="section-heading" id="lmod-sagehen-hpcs-module-manager">Lmod: Sagehen HPC’s Module Manager<a class="anchor" aria-label="anchor" href="#lmod-sagehen-hpcs-module-manager"></a></h2>
 <hr class="half-width"><p>Sagehen uses <strong>Lmod</strong> with 90+ pre-installed modules
 covering programming languages, compilers, scientific libraries,
 bioinformatics tools, and more.</p>
@@ -419,7 +419,7 @@ bioinformatics tools, and more.</p>
 <span id="cb1-8"><a href="#cb1-8" tabindex="-1" aria-label="code-block-1-8"></a><span class="ex">module</span> show miniconda3/py313_26.3.2-2</span></code></pre>
 </div>
 <figure><img src="../fig/08-module-avail-output.png" alt="Terminal output of module avail on Sagehen showing a long multi-column list of software modules under /opt/linux/rocky/8/modulefile, including anaconda3, cuda, matlab, openmpi, r, and three miniconda3 versions with py313_26.3.2-2 marked as the default." class="figure mx-auto d-block"><div class="figcaption">The real <code>module avail</code> listing on
-Sagehen — miniconda3’s versions are in the middle column, with
+Sagehen HPC — miniconda3’s versions are in the middle column, with
 <code>(D)</code> marking the default.</div>
 </figure></div>
 <div class="section level3">
@@ -576,7 +576,7 @@ Modules</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul><li>The default <code>module load miniconda3</code> loads the most
 recent stable version</li>
@@ -676,14 +676,14 @@ any links that you are not going to use.
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "Pomona College, HPC, research computing, Sagehen, cluster computing, job scheduling, modules",
+  "keywords": "Pomona College, HPC, research computing, Sagehen HPC, cluster computing, job scheduling, modules",
   "name": "Software Modules Basics",
   "creativeWorkStatus": "active",
   "url": "https://pomona-college.github.io/hpc-intro/instructor/08-software-modules.html",
   "identifier": "https://pomona-college.github.io/hpc-intro/instructor/08-software-modules.html",
   "dateCreated": "2025-03-06",
-  "dateModified": "2026-08-24",
-  "datePublished": "2026-08-26"
+  "dateModified": "2026-08-27",
+  "datePublished": "2026-08-27"
 }
 
   </script><script>

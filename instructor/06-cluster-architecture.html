@@ -207,7 +207,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="03-connecting-to-sagehen.html">3. Connecting to Sagehen</a>
+        <a href="03-connecting-to-sagehen.html">3. Connecting to Sagehen HPC</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -346,7 +346,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Cluster Architecture</h1>
-        <p>Last updated on 2026-08-24 |
+        <p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-intro/edit/main/episodes/06-cluster-architecture.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -367,7 +367,7 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>What are partitions and why does Sagehen have three?</li>
+<ul><li>What are partitions and why does Sagehen HPC have three?</li>
 <li>What hardware is in each partition?</li>
 <li>How do I view cluster status?</li>
 </ul></div>
@@ -392,9 +392,9 @@ compute nodes with shared characteristics. Sagehen uses partitions to
 organize nodes by hardware type, time limits, and priority.</p>
 <p>Think of partitions like different sections of a library: fiction,
 non-fiction, reference. Each section is organized for its purpose.</p>
-<figure><img src="../fig/01-cluster-architecture.png" alt="Diagram of the Sagehen HPC cluster. Researchers connect via SSH or the OnDemand web portal to the head node, which dispatches jobs via sbatch or srun to the amd partition of 12 compute nodes with 128 AMD EPYC cores and 500 GB RAM each, or the gpu partition with 10 GPUs total. A short partition serves quick tests and debugging with a shorter walltime. All nodes share BeeGFS storage over 100 Gb InfiniBand." class="figure mx-auto d-block"><div class="figcaption">How Sagehen’s partitions fit into the cluster:
-the head node dispatches jobs to the amd and gpu partitions, with the
-short partition for quick tests.</div>
+<figure><img src="../fig/01-cluster-architecture.png" alt="Diagram of the Sagehen HPC cluster. Researchers connect via SSH or the OnDemand web portal to the head node, which dispatches jobs via sbatch or srun to the amd partition of 12 compute nodes with 128 AMD EPYC cores and 500 GB RAM each, or the gpu partition with 10 GPUs total. A short partition serves quick tests and debugging with a shorter walltime. All nodes share BeeGFS storage over 100 Gb InfiniBand." class="figure mx-auto d-block"><div class="figcaption">How Sagehen HPC’s partitions fit into the
+cluster: the head node dispatches jobs to the amd and gpu partitions,
+with the short partition for quick tests.</div>
 </figure><div class="section level3">
 <h3 id="the-amd-partition-standard-compute">The “amd” Partition (Standard Compute)<a class="anchor" aria-label="anchor" href="#the-amd-partition-standard-compute"></a></h3>
 <p>The primary general-purpose partition for most research.</p>
@@ -501,13 +501,13 @@ always check <code>sinfo -p short</code> for current values.)</p>
 <li>
 <code>STATE</code>: Current state (alloc=some allocated, idle=free,
 down=unavailable)</li>
-</ul><div id="challenge-1-exploring-sagehens-partitions" class="callout challenge">
+</ul><div id="challenge-1-exploring-sagehen-hpcs-partitions" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1-exploring-sagehens-partitions" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Exploring Sagehen’s
+<div id="challenge-1-exploring-sagehen-hpcs-partitions" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Exploring Sagehen HPC’s
 Partitions</h3>
 <div class="callout-content">
 <p>Query the cluster to understand its configuration.</p>
@@ -530,7 +530,7 @@ Partitions</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul><li>amd partition: 12 nodes</li>
 <li>amd partition maximum walltime: 720 hours (30 days)</li>
@@ -628,14 +628,14 @@ any links that you are not going to use.
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "Pomona College, HPC, research computing, Sagehen, cluster computing, job scheduling, modules",
+  "keywords": "Pomona College, HPC, research computing, Sagehen HPC, cluster computing, job scheduling, modules",
   "name": "Cluster Architecture",
   "creativeWorkStatus": "active",
   "url": "https://pomona-college.github.io/hpc-intro/instructor/06-cluster-architecture.html",
   "identifier": "https://pomona-college.github.io/hpc-intro/instructor/06-cluster-architecture.html",
   "dateCreated": "2025-03-06",
-  "dateModified": "2026-08-24",
-  "datePublished": "2026-08-26"
+  "dateModified": "2026-08-27",
+  "datePublished": "2026-08-27"
 }
 
   </script><script>

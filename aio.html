@@ -251,7 +251,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="03-connecting-to-sagehen.html">3. Connecting to Sagehen</a>
+        <a href="03-connecting-to-sagehen.html">3. Connecting to Sagehen HPC</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -400,7 +400,7 @@
         
 <section id="aio-01-what-is-hpc"><p>Content from <a href="01-what-is-hpc.html">What is High-Performance Computing?</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-intro/edit/main/episodes/01-what-is-hpc.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -416,7 +416,7 @@
 <ul>
 <li>What is high-performance computing (HPC)?</li>
 <li>What is a cluster and how is it different from my laptop?</li>
-<li>What is Sagehen?</li>
+<li>What is Sagehen HPC?</li>
 </ul>
 </div>
 </div>
@@ -468,18 +468,18 @@ manage hardware, software, security, and backups</li>
 independent of what else is running</li>
 </ol>
 </div>
-</section><section><h2 class="section-heading" id="introducing-sagehen">Introducing Sagehen<a class="anchor" aria-label="anchor" href="#introducing-sagehen"></a>
+</section><section><h2 class="section-heading" id="introducing-sagehen-hpc">Introducing Sagehen HPC<a class="anchor" aria-label="anchor" href="#introducing-sagehen-hpc"></a>
 </h2>
 <hr class="half-width">
 <p><strong>Sagehen</strong> (sagehen.hpc.pomona.edu) is Pomona College’s
 research computing cluster. Named after a bird native to California’s
 Sierra Nevada, Sagehen brings powerful computing resources to Pomona’s
 research community.</p>
-<figure><img src="fig/01-cluster-architecture.png" alt="Diagram of the Sagehen HPC cluster. Researchers connect via SSH or the OnDemand web portal to the head node, sagehen.hpc.pomona.edu, which is for login and job submission only. Jobs are dispatched via sbatch or srun to the amd partition of 12 compute nodes with 128 AMD EPYC cores and 500 GB RAM each, or to the gpu partition with 10 GPUs total. A short partition serves quick tests and debugging. All nodes connect over 100 Gb InfiniBand to shared BeeGFS storage: /rhome, /bigdata, and /scratch." class="figure mx-auto d-block"><div class="figcaption">Sagehen’s architecture: researchers connect
+<figure><img src="fig/01-cluster-architecture.png" alt="Diagram of the Sagehen HPC cluster. Researchers connect via SSH or the OnDemand web portal to the head node, sagehen.hpc.pomona.edu, which is for login and job submission only. Jobs are dispatched via sbatch or srun to the amd partition of 12 compute nodes with 128 AMD EPYC cores and 500 GB RAM each, or to the gpu partition with 10 GPUs total. A short partition serves quick tests and debugging. All nodes connect over 100 Gb InfiniBand to shared BeeGFS storage: /rhome, /bigdata, and /scratch." class="figure mx-auto d-block"><div class="figcaption">Sagehen HPC’s architecture: researchers connect
 through the head node, which dispatches jobs to the compute and GPU
 partitions, all sharing BeeGFS storage over 100 Gb InfiniBand.</div>
 </figure><div class="section level3">
-<h3 id="who-should-use-sagehen">Who Should Use Sagehen?<a class="anchor" aria-label="anchor" href="#who-should-use-sagehen"></a>
+<h3 id="who-should-use-sagehen-hpc">Who Should Use Sagehen HPC?<a class="anchor" aria-label="anchor" href="#who-should-use-sagehen-hpc"></a>
 </h3>
 <p>Sagehen is available to:</p>
 <ul>
@@ -594,7 +594,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-02-why-use-hpc"><p>Content from <a href="02-why-use-hpc.html">Why Use an HPC Cluster?</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-intro/edit/main/episodes/02-why-use-hpc.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -609,7 +609,7 @@ any links that you are not going to use.
 <h3 class="card-title">Questions</h3>
 <ul>
 <li>When do I need HPC for my research?</li>
-<li>What hardware does Sagehen provide?</li>
+<li>What hardware does Sagehen HPC provide?</li>
 <li>What are the resource limits on Sagehen?</li>
 </ul>
 </div>
@@ -656,7 +656,7 @@ simulations</li>
 <li>You need specialized hardware like GPUs</li>
 </ul>
 </div>
-</section><section><h2 class="section-heading" id="sagehens-hardware-at-a-glance">Sagehen’s Hardware at a Glance<a class="anchor" aria-label="anchor" href="#sagehens-hardware-at-a-glance"></a>
+</section><section><h2 class="section-heading" id="sagehen-hpcs-hardware-at-a-glance">Sagehen HPC’s Hardware at a Glance<a class="anchor" aria-label="anchor" href="#sagehen-hpcs-hardware-at-a-glance"></a>
 </h2>
 <hr class="half-width">
 <div class="section level3">
@@ -780,7 +780,7 @@ specific project</li>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="your-first-hpc-experience-on-sagehen">Your First HPC Experience on Sagehen<a class="anchor" aria-label="anchor" href="#your-first-hpc-experience-on-sagehen"></a>
+</section><section><h2 class="section-heading" id="your-first-hpc-experience-on-sagehen-hpc">Your First HPC Experience on Sagehen HPC<a class="anchor" aria-label="anchor" href="#your-first-hpc-experience-on-sagehen-hpc"></a>
 </h2>
 <hr class="half-width">
 <p>Over the next episodes, you will:</p>
@@ -874,9 +874,9 @@ resource limits</li>
 <script>(function(){var CSS='.sh-placeholder{color:#c2410c;font-weight:700}[data-bs-theme="dark"] .sh-placeholder,html.dark .sh-placeholder{color:#fdba74}@media (prefers-color-scheme: dark){[data-bs-theme="auto"] .sh-placeholder{color:#fdba74}}';var RX=/<labname>|<myusername>/g;function firstMatch(el){var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),nodes=[],full='';while(w.nextNode()){nodes.push({n:w.currentNode,s:full.length});full+=w.currentNode.nodeValue;}RX.lastIndex=0;var m;while((m=RX.exec(full))){var s=m.index,e=s+m[0].length,inSpan=false,parts=[];for(var j=0;j<nodes.length;j++){var ns=nodes[j].s,ne=ns+nodes[j].n.nodeValue.length;if(ne<=s||ns>=e)continue;parts.push({node:nodes[j].n,a:Math.max(s-ns,0),b:Math.min(e-ns,nodes[j].n.nodeValue.length)});var p=nodes[j].n.parentNode;while(p&&p!==el){if(p.classList&&p.classList.contains('sh-placeholder')){inSpan=true;break;}p=p.parentNode;}}if(!inSpan&&parts.length)return parts;}return null;}function wrapParts(parts){for(var i=parts.length-1;i>=0;i--){var t=parts[i].node,txt=t.nodeValue,a=parts[i].a,b=parts[i].b;var span=document.createElement('span');span.className='sh-placeholder';span.textContent=txt.slice(a,b);var f=document.createDocumentFragment();if(a>0)f.appendChild(document.createTextNode(txt.slice(0,a)));f.appendChild(span);if(b<txt.length)f.appendChild(document.createTextNode(txt.slice(b)));t.parentNode.replaceChild(f,t);}}function run(){var st=document.createElement('style');st.textContent=CSS;document.head.appendChild(st);document.querySelectorAll('pre,code').forEach(function(el){var guard=0,parts;while((parts=firstMatch(el))&&guard++<500){wrapParts(parts);}});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}})();</script><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></section></section><section id="aio-03-connecting-to-sagehen"><p>Content from <a href="03-connecting-to-sagehen.html">Connecting to Sagehen</a></p>
+ --></section></section><section id="aio-03-connecting-to-sagehen"><p>Content from <a href="03-connecting-to-sagehen.html">Connecting to Sagehen HPC</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-intro/edit/main/episodes/03-connecting-to-sagehen.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1100,7 +1100,7 @@ acceptable</li>
 <strong>DUO is required</strong>: You cannot bypass two-factor
 authentication</li>
 </ol>
-<figure><img src="fig/auth-stack.png" alt="Diagram of the secure authentication stack. Three stacked layers: Strong Password with 14 or more characters per NIST SP 800-63B and length over complexity; DUO MFA two-factor authentication at duo.pomona.edu; and SSH Keys with Ed25519 preferred, RSA-4096 acceptable, and an encrypted passphrase required. The layers converge to Secure Access to the Sagehen HPC cluster." class="figure mx-auto d-block"><div class="figcaption">The three layers that protect your Sagehen
+<figure><img src="fig/auth-stack.png" alt="Diagram of the secure authentication stack. Three stacked layers: Strong Password with 14 or more characters per NIST SP 800-63B and length over complexity; DUO MFA two-factor authentication at duo.pomona.edu; and SSH Keys with Ed25519 preferred, RSA-4096 acceptable, and an encrypted passphrase required. The layers converge to Secure Access to the Sagehen HPC cluster." class="figure mx-auto d-block"><div class="figcaption">The three layers that protect your Sagehen HPC
 account: a strong password, DUO MFA, and SSH keys.</div>
 </figure>
 </div>
@@ -1190,7 +1190,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-04-navigating-filesystem"><p>Content from <a href="04-navigating-filesystem.html">Navigating the Filesystem</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-intro/edit/main/episodes/04-navigating-filesystem.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1204,7 +1204,7 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How is the Sagehen filesystem organized?</li>
+<li>How is the Sagehen HPC filesystem organized?</li>
 <li>What are the different storage spaces and what are they for?</li>
 <li>How do I check my storage quota?</li>
 </ul>
@@ -1226,13 +1226,13 @@ any links that you are not going to use.
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="sagehens-storage-architecture">Sagehen’s Storage Architecture<a class="anchor" aria-label="anchor" href="#sagehens-storage-architecture"></a>
+<section><h2 class="section-heading" id="sagehen-hpcs-storage-architecture">Sagehen HPC’s Storage Architecture<a class="anchor" aria-label="anchor" href="#sagehen-hpcs-storage-architecture"></a>
 </h2>
 <hr class="half-width">
 <p>Sagehen uses a BeeGFS parallel filesystem connected via 100 Gb
 Infiniband. It has multiple storage systems, each designed for specific
 purposes.</p>
-<figure><img src="fig/storage-architecture.png" alt="Diagram of the HPC storage hierarchy with five storage types. /rhome home directory and /bigdata/lab lab shared storage share a 1 TB quota, are backed up, and hold PUBLIC and PROPRIETARY data. gocryptfs encrypted storage on /rhome or /bigdata uses AES-256-GCM encryption and is required for RESTRICTED data. /scratch is fast temporary SSD storage deleted when the job completes. /tmpfs is RAM-backed, fastest, deleted when the job ends, and limited in capacity." class="figure mx-auto d-block"><div class="figcaption">Sagehen’s storage hierarchy: persistent gold
+<figure><img src="fig/storage-architecture.png" alt="Diagram of the HPC storage hierarchy with five storage types. /rhome home directory and /bigdata/lab lab shared storage share a 1 TB quota, are backed up, and hold PUBLIC and PROPRIETARY data. gocryptfs encrypted storage on /rhome or /bigdata uses AES-256-GCM encryption and is required for RESTRICTED data. /scratch is fast temporary SSD storage deleted when the job completes. /tmpfs is RAM-backed, fastest, deleted when the job ends, and limited in capacity." class="figure mx-auto d-block"><div class="figcaption">Sagehen HPC’s storage hierarchy: persistent gold
 tiers at the top, encrypted storage for RESTRICTED data in the middle,
 and fast temporary tiers at the bottom.</div>
 </figure><div class="section level3">
@@ -1462,13 +1462,14 @@ shared pool usage on top, your per-user usage below.</div>
 </li>
 <li>Contacting <a href="mailto:its-hpc@pomona.edu" class="email">its-hpc@pomona.edu</a> for additional storage</li>
 </ol>
-<div id="challenge-1-explore-sagehens-storage" class="callout challenge">
+<div id="challenge-1-explore-sagehen-hpcs-storage" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1-explore-sagehens-storage" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Explore Sagehen’s Storage</h3>
+<div id="challenge-1-explore-sagehen-hpcs-storage" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Explore Sagehen HPC’s
+Storage</h3>
 <div class="callout-content">
 <p>Connect to Sagehen and explore the filesystem.</p>
 <p><strong>Steps</strong>:</p>
@@ -1496,7 +1497,7 @@ shared pool usage on top, your per-user usage below.</div>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>Your home directory should be
@@ -1547,7 +1548,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-05-files-and-directories"><p>Content from <a href="05-files-and-directories.html">Files and Directories</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-intro/edit/main/episodes/05-files-and-directories.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1562,7 +1563,7 @@ any links that you are not going to use.
 <h3 class="card-title">Questions</h3>
 <ul>
 <li>How do I create, copy, move, and delete files?</li>
-<li>How should I organize my work on Sagehen?</li>
+<li>How should I organize my work on Sagehen HPC?</li>
 <li>What are file permissions and how do I change them?</li>
 </ul>
 </div>
@@ -1820,7 +1821,7 @@ operations.</p>
 (subdirectories).</p>
 <p>The command <code>ls -R workshop-0</code> shows the entire tree,
 including the <code>test.txt</code> file you created.</p>
-<figure><img src="fig/05-challenge-project-structure.png" alt="A terminal transcript creating the data, results, and scripts directories under workshop-0 with mkdir -p, with pwd printing the home workshop-0 path. A test.txt containing Hello Sagehen is created and displayed, ls -lah lists the contents, and ls -R shows the recursive tree." class="figure mx-auto d-block"><div class="figcaption">What Challenge 1 looks like when it works: the
+<figure><img src="fig/05-challenge-project-structure.png" alt="A terminal transcript creating the data, results, and scripts directories under workshop-0 with mkdir -p, with pwd printing the home workshop-0 path. A test.txt containing Hello Sagehen HPC is created and displayed, ls -lah lists the contents, and ls -R shows the recursive tree." class="figure mx-auto d-block"><div class="figcaption">What Challenge 1 looks like when it works: the
 workshop-0 tree with its three subdirectories and test file.</div>
 </figure>
 </div>
@@ -1857,7 +1858,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-06-cluster-architecture"><p>Content from <a href="06-cluster-architecture.html">Cluster Architecture</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-intro/edit/main/episodes/06-cluster-architecture.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1871,7 +1872,7 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What are partitions and why does Sagehen have three?</li>
+<li>What are partitions and why does Sagehen HPC have three?</li>
 <li>What hardware is in each partition?</li>
 <li>How do I view cluster status?</li>
 </ul>
@@ -1901,9 +1902,9 @@ compute nodes with shared characteristics. Sagehen uses partitions to
 organize nodes by hardware type, time limits, and priority.</p>
 <p>Think of partitions like different sections of a library: fiction,
 non-fiction, reference. Each section is organized for its purpose.</p>
-<figure><img src="fig/01-cluster-architecture.png" alt="Diagram of the Sagehen HPC cluster. Researchers connect via SSH or the OnDemand web portal to the head node, which dispatches jobs via sbatch or srun to the amd partition of 12 compute nodes with 128 AMD EPYC cores and 500 GB RAM each, or the gpu partition with 10 GPUs total. A short partition serves quick tests and debugging with a shorter walltime. All nodes share BeeGFS storage over 100 Gb InfiniBand." class="figure mx-auto d-block"><div class="figcaption">How Sagehen’s partitions fit into the cluster:
-the head node dispatches jobs to the amd and gpu partitions, with the
-short partition for quick tests.</div>
+<figure><img src="fig/01-cluster-architecture.png" alt="Diagram of the Sagehen HPC cluster. Researchers connect via SSH or the OnDemand web portal to the head node, which dispatches jobs via sbatch or srun to the amd partition of 12 compute nodes with 128 AMD EPYC cores and 500 GB RAM each, or the gpu partition with 10 GPUs total. A short partition serves quick tests and debugging with a shorter walltime. All nodes share BeeGFS storage over 100 Gb InfiniBand." class="figure mx-auto d-block"><div class="figcaption">How Sagehen HPC’s partitions fit into the
+cluster: the head node dispatches jobs to the amd and gpu partitions,
+with the short partition for quick tests.</div>
 </figure><div class="section level3">
 <h3 id="the-amd-partition-standard-compute">The “amd” Partition (Standard Compute)<a class="anchor" aria-label="anchor" href="#the-amd-partition-standard-compute"></a>
 </h3>
@@ -2045,13 +2046,13 @@ always check <code>sinfo -p short</code> for current values.)</p>
 <code>STATE</code>: Current state (alloc=some allocated, idle=free,
 down=unavailable)</li>
 </ul>
-<div id="challenge-1-exploring-sagehens-partitions" class="callout challenge">
+<div id="challenge-1-exploring-sagehen-hpcs-partitions" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1-exploring-sagehens-partitions" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Exploring Sagehen’s
+<div id="challenge-1-exploring-sagehen-hpcs-partitions" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Exploring Sagehen HPC’s
 Partitions</h3>
 <div class="callout-content">
 <p>Query the cluster to understand its configuration.</p>
@@ -2078,7 +2079,7 @@ Partitions</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>amd partition: 12 nodes</li>
@@ -2129,7 +2130,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-07-nodes-and-partitions"><p>Content from <a href="07-nodes-and-partitions.html">Understanding Nodes and Partitions</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-intro/edit/main/episodes/07-nodes-and-partitions.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2181,7 +2182,7 @@ storage, and processors</li>
 node</li>
 <li>
 <strong>Core</strong>: An individual processing unit within a socket
-(128 per node on Sagehen)</li>
+(128 per node on Sagehen HPC)</li>
 <li>
 <strong>Thread</strong>: A logical processing unit (some CPUs
 support hyperthreading)</li>
@@ -2258,7 +2259,7 @@ Use the <strong>short</strong> partition (shorter walltime limit, check
 <strong>Everything else (production CPU jobs)</strong> -&gt; Use the
 <strong>amd</strong> partition</li>
 </ol>
-<figure><img src="fig/07-partition-comparison.png" alt="Three-column comparison of Sagehen partitions. The amd default partition has 12 nodes a001 through a012 with 128 AMD EPYC cores and 500 GB RAM per node, a max walltime of 720 hours or 30 days, and is best for long CPU jobs, simulations, data processing, and multi-node MPI. The gpu partition has 10 GPUs: four A100 80 GB, four L40S 48 GB, and two RTX PRO 6000 96 GB, with a max walltime of 720 hours, best for machine learning, CUDA code, and GPU-accelerated computing. The short partition is for quick jobs and debugging with a shorter max walltime; check sinfo -p short." class="figure mx-auto d-block"><div class="figcaption">Side-by-side comparison of the three partitions
+<figure><img src="fig/07-partition-comparison.png" alt="Three-column comparison of Sagehen HPC partitions. The amd default partition has 12 nodes a001 through a012 with 128 AMD EPYC cores and 500 GB RAM per node, a max walltime of 720 hours or 30 days, and is best for long CPU jobs, simulations, data processing, and multi-node MPI. The gpu partition has 10 GPUs: four A100 80 GB, four L40S 48 GB, and two RTX PRO 6000 96 GB, with a max walltime of 720 hours, best for machine learning, CUDA code, and GPU-accelerated computing. The short partition is for quick jobs and debugging with a shorter max walltime; check sinfo -p short." class="figure mx-auto d-block"><div class="figcaption">Side-by-side comparison of the three partitions
 and what each is best for.</div>
 </figure>
 </div>
@@ -2405,7 +2406,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-08-software-modules"><p>Content from <a href="08-software-modules.html">Software Modules Basics</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-intro/edit/main/episodes/08-software-modules.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2419,7 +2420,7 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>Why can’t I just use any software on Sagehen?</li>
+<li>Why can’t I just use any software on Sagehen HPC?</li>
 <li>What is the module system?</li>
 <li>How do I find, load, and unload software modules?</li>
 <li>What if I need software that’s not installed?</li>
@@ -2458,7 +2459,7 @@ cluster with hundreds of researchers, this creates conflicts:</p>
 </ul>
 <p>A <strong>module system</strong> allows users to load and unload
 software dynamically, so multiple versions coexist without conflict.</p>
-</section><section><h2 class="section-heading" id="lmod-sagehens-module-manager">Lmod: Sagehen’s Module Manager<a class="anchor" aria-label="anchor" href="#lmod-sagehens-module-manager"></a>
+</section><section><h2 class="section-heading" id="lmod-sagehen-hpcs-module-manager">Lmod: Sagehen HPC’s Module Manager<a class="anchor" aria-label="anchor" href="#lmod-sagehen-hpcs-module-manager"></a>
 </h2>
 <hr class="half-width">
 <p>Sagehen uses <strong>Lmod</strong> with 90+ pre-installed modules
@@ -2480,7 +2481,7 @@ bioinformatics tools, and more.</p>
 <span id="cb1-8"><a href="#cb1-8" tabindex="-1" aria-label="code-block-1-8"></a><span class="ex">module</span> show miniconda3/py313_26.3.2-2</span></code></pre>
 </div>
 <figure><img src="fig/08-module-avail-output.png" alt="Terminal output of module avail on Sagehen showing a long multi-column list of software modules under /opt/linux/rocky/8/modulefile, including anaconda3, cuda, matlab, openmpi, r, and three miniconda3 versions with py313_26.3.2-2 marked as the default." class="figure mx-auto d-block"><div class="figcaption">The real <code>module avail</code> listing on
-Sagehen — miniconda3’s versions are in the middle column, with
+Sagehen HPC — miniconda3’s versions are in the middle column, with
 <code>(D)</code> marking the default.</div>
 </figure>
 </div>
@@ -2650,7 +2651,7 @@ Modules</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>The default <code>module load miniconda3</code> loads the most
@@ -2702,7 +2703,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-09-running-first-job"><p>Content from <a href="09-running-first-job.html">Running Your First Job</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-intro/edit/main/episodes/09-running-first-job.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2717,7 +2718,7 @@ any links that you are not going to use.
 <h3 class="card-title">Questions</h3>
 <ul>
 <li>What is a batch script?</li>
-<li>How do I submit a job to Sagehen?</li>
+<li>How do I submit a job to Sagehen HPC?</li>
 <li>How do I monitor my job and retrieve output?</li>
 </ul>
 </div>
@@ -3063,7 +3064,7 @@ directory you submit from):</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Fibonacci(20) = 6765</p>
 <p>The job should complete in seconds. Check with
@@ -3111,7 +3112,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-10-next-steps"><p>Content from <a href="10-next-steps.html">Next Steps and Resources</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-intro/edit/main/episodes/10-next-steps.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -3221,7 +3222,7 @@ topics:</p>
 arrays, dependencies, GPU workflows</li>
 <li>
 <strong>Data Transfer and Management</strong>: Moving data to/from
-Sagehen with scp, rsync, Globus</li>
+Sagehen HPC with scp, rsync, Globus</li>
 <li>
 <strong>Security and Access</strong>: SSH keys, data classification,
 encrypted storage</li>
@@ -3464,14 +3465,14 @@ any links that you are not going to use.
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "Pomona College, HPC, research computing, Sagehen, cluster computing, job scheduling, modules",
+  "keywords": "Pomona College, HPC, research computing, Sagehen HPC, cluster computing, job scheduling, modules",
   "name": "All in One View",
   "creativeWorkStatus": "active",
   "url": "https://pomona-college.github.io/hpc-intro/aio.html",
   "identifier": "https://pomona-college.github.io/hpc-intro/aio.html",
   "dateCreated": "2025-03-06",
-  "dateModified": "2026-08-26",
-  "datePublished": "2026-08-26"
+  "dateModified": "2026-08-27",
+  "datePublished": "2026-08-27"
 }
 
   </script><script>

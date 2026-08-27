@@ -251,7 +251,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="03-connecting-to-sagehen.html">3. Connecting to Sagehen</a>
+        <a href="03-connecting-to-sagehen.html">3. Connecting to Sagehen HPC</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -402,11 +402,11 @@
 <hr class="half-width">
 <h3 id="01-what-is-hpc-figure-1">Figure 1</h3>
 <p aria-hidden="true">Image 1 of 1: ‘Diagram of the Sagehen HPC cluster. Researchers connect via SSH or the OnDemand web portal to the head node, sagehen.hpc.pomona.edu, which is for login and job submission only. Jobs are dispatched via sbatch or srun to the amd partition of 12 compute nodes with 128 AMD EPYC cores and 500 GB RAM each, or to the gpu partition with 10 GPUs total. A short partition serves quick tests and debugging. All nodes connect over 100 Gb InfiniBand to shared BeeGFS storage: /rhome, /bigdata, and /scratch.’</p>
-<figure><img src="fig/01-cluster-architecture.png" alt="Diagram of the Sagehen HPC cluster. Researchers connect via SSH or the OnDemand web portal to the head node, sagehen.hpc.pomona.edu, which is for login and job submission only. Jobs are dispatched via sbatch or srun to the amd partition of 12 compute nodes with 128 AMD EPYC cores and 500 GB RAM each, or to the gpu partition with 10 GPUs total. A short partition serves quick tests and debugging. All nodes connect over 100 Gb InfiniBand to shared BeeGFS storage: /rhome, /bigdata, and /scratch." class="figure mx-auto d-block"><div class="figcaption">Sagehen’s architecture: researchers connect
+<figure><img src="fig/01-cluster-architecture.png" alt="Diagram of the Sagehen HPC cluster. Researchers connect via SSH or the OnDemand web portal to the head node, sagehen.hpc.pomona.edu, which is for login and job submission only. Jobs are dispatched via sbatch or srun to the amd partition of 12 compute nodes with 128 AMD EPYC cores and 500 GB RAM each, or to the gpu partition with 10 GPUs total. A short partition serves quick tests and debugging. All nodes connect over 100 Gb InfiniBand to shared BeeGFS storage: /rhome, /bigdata, and /scratch." class="figure mx-auto d-block"><div class="figcaption">Sagehen HPC’s architecture: researchers connect
 through the head node, which dispatches jobs to the compute and GPU
 partitions, all sharing BeeGFS storage over 100 Gb InfiniBand.</div>
 </figure><hr></section><section id="02-why-use-hpc"><h2 class="section-heading"><a href="02-why-use-hpc.html">Why Use an HPC Cluster?</a></h2>
-<hr class="half-width"></section><section id="03-connecting-to-sagehen"><h2 class="section-heading"><a href="03-connecting-to-sagehen.html">Connecting to Sagehen</a></h2>
+<hr class="half-width"></section><section id="03-connecting-to-sagehen"><h2 class="section-heading"><a href="03-connecting-to-sagehen.html">Connecting to Sagehen HPC</a></h2>
 <hr class="half-width">
 <h3 id="03-connecting-to-sagehen-figure-1">Figure 1</h3>
 <p aria-hidden="true">Image 1 of 1: ‘Flow diagram of connecting to Sagehen. Open Terminal or OnDemand, enter Pomona username, enter password, then the DUO MFA prompt offers three paths: Push approves on the Duo Mobile app, SMS enters a code from a text message, and Passcode enters a backup code. All three paths lead to Connected to Sagehen.’</p>
@@ -430,13 +430,13 @@ shell access, system status, file browsing, and interactive apps.</div>
 </figure><hr>
 <h3 id="03-connecting-to-sagehen-figure-5">Figure 5</h3>
 <p aria-hidden="true">Image 1 of 1: ‘Diagram of the secure authentication stack. Three stacked layers: Strong Password with 14 or more characters per NIST SP 800-63B and length over complexity; DUO MFA two-factor authentication at duo.pomona.edu; and SSH Keys with Ed25519 preferred, RSA-4096 acceptable, and an encrypted passphrase required. The layers converge to Secure Access to the Sagehen HPC cluster.’</p>
-<figure><img src="fig/auth-stack.png" alt="Diagram of the secure authentication stack. Three stacked layers: Strong Password with 14 or more characters per NIST SP 800-63B and length over complexity; DUO MFA two-factor authentication at duo.pomona.edu; and SSH Keys with Ed25519 preferred, RSA-4096 acceptable, and an encrypted passphrase required. The layers converge to Secure Access to the Sagehen HPC cluster." class="figure mx-auto d-block"><div class="figcaption">The three layers that protect your Sagehen
+<figure><img src="fig/auth-stack.png" alt="Diagram of the secure authentication stack. Three stacked layers: Strong Password with 14 or more characters per NIST SP 800-63B and length over complexity; DUO MFA two-factor authentication at duo.pomona.edu; and SSH Keys with Ed25519 preferred, RSA-4096 acceptable, and an encrypted passphrase required. The layers converge to Secure Access to the Sagehen HPC cluster." class="figure mx-auto d-block"><div class="figcaption">The three layers that protect your Sagehen HPC
 account: a strong password, DUO MFA, and SSH keys.</div>
 </figure><hr></section><section id="04-navigating-filesystem"><h2 class="section-heading"><a href="04-navigating-filesystem.html">Navigating the Filesystem</a></h2>
 <hr class="half-width">
 <h3 id="04-navigating-filesystem-figure-1">Figure 1</h3>
 <p aria-hidden="true">Image 1 of 1: ‘Diagram of the HPC storage hierarchy with five storage types. /rhome home directory and /bigdata/lab lab shared storage share a 1 TB quota, are backed up, and hold PUBLIC and PROPRIETARY data. gocryptfs encrypted storage on /rhome or /bigdata uses AES-256-GCM encryption and is required for RESTRICTED data. /scratch is fast temporary SSD storage deleted when the job completes. /tmpfs is RAM-backed, fastest, deleted when the job ends, and limited in capacity.’</p>
-<figure><img src="fig/storage-architecture.png" alt="Diagram of the HPC storage hierarchy with five storage types. /rhome home directory and /bigdata/lab lab shared storage share a 1 TB quota, are backed up, and hold PUBLIC and PROPRIETARY data. gocryptfs encrypted storage on /rhome or /bigdata uses AES-256-GCM encryption and is required for RESTRICTED data. /scratch is fast temporary SSD storage deleted when the job completes. /tmpfs is RAM-backed, fastest, deleted when the job ends, and limited in capacity." class="figure mx-auto d-block"><div class="figcaption">Sagehen’s storage hierarchy: persistent gold
+<figure><img src="fig/storage-architecture.png" alt="Diagram of the HPC storage hierarchy with five storage types. /rhome home directory and /bigdata/lab lab shared storage share a 1 TB quota, are backed up, and hold PUBLIC and PROPRIETARY data. gocryptfs encrypted storage on /rhome or /bigdata uses AES-256-GCM encryption and is required for RESTRICTED data. /scratch is fast temporary SSD storage deleted when the job completes. /tmpfs is RAM-backed, fastest, deleted when the job ends, and limited in capacity." class="figure mx-auto d-block"><div class="figcaption">Sagehen HPC’s storage hierarchy: persistent gold
 tiers at the top, encrypted storage for RESTRICTED data in the middle,
 and fast temporary tiers at the bottom.</div>
 </figure><hr>
@@ -459,16 +459,16 @@ mydir, ls -la shows it is empty, and rm -ri prompts remove directory
 each change with <code>ls -l</code>.</div>
 </figure><hr>
 <h3 id="05-files-and-directories-figure-3">Figure 3</h3>
-<p aria-hidden="true">Image 1 of 1: ‘A terminal transcript creating the data, results, and scripts directories under workshop-0 with mkdir -p, with pwd printing the home workshop-0 path. A test.txt containing Hello Sagehen is created and displayed, ls -lah lists the contents, and ls -R shows the recursive tree.’</p>
-<figure><img src="fig/05-challenge-project-structure.png" alt="A terminal transcript creating the data, results, and scripts directories under workshop-0 with mkdir -p, with pwd printing the home workshop-0 path. A test.txt containing Hello Sagehen is created and displayed, ls -lah lists the contents, and ls -R shows the recursive tree." class="figure mx-auto d-block"><div class="figcaption">What Challenge 1 looks like when it works: the
+<p aria-hidden="true">Image 1 of 1: ‘A terminal transcript creating the data, results, and scripts directories under workshop-0 with mkdir -p, with pwd printing the home workshop-0 path. A test.txt containing Hello Sagehen HPC is created and displayed, ls -lah lists the contents, and ls -R shows the recursive tree.’</p>
+<figure><img src="fig/05-challenge-project-structure.png" alt="A terminal transcript creating the data, results, and scripts directories under workshop-0 with mkdir -p, with pwd printing the home workshop-0 path. A test.txt containing Hello Sagehen HPC is created and displayed, ls -lah lists the contents, and ls -R shows the recursive tree." class="figure mx-auto d-block"><div class="figcaption">What Challenge 1 looks like when it works: the
 workshop-0 tree with its three subdirectories and test file.</div>
 </figure><hr></section><section id="06-cluster-architecture"><h2 class="section-heading"><a href="06-cluster-architecture.html">Cluster Architecture</a></h2>
 <hr class="half-width">
 <h3 id="06-cluster-architecture-figure-1">Figure 1</h3>
 <p aria-hidden="true">Image 1 of 1: ‘Diagram of the Sagehen HPC cluster. Researchers connect via SSH or the OnDemand web portal to the head node, which dispatches jobs via sbatch or srun to the amd partition of 12 compute nodes with 128 AMD EPYC cores and 500 GB RAM each, or the gpu partition with 10 GPUs total. A short partition serves quick tests and debugging with a shorter walltime. All nodes share BeeGFS storage over 100 Gb InfiniBand.’</p>
-<figure><img src="fig/01-cluster-architecture.png" alt="Diagram of the Sagehen HPC cluster. Researchers connect via SSH or the OnDemand web portal to the head node, which dispatches jobs via sbatch or srun to the amd partition of 12 compute nodes with 128 AMD EPYC cores and 500 GB RAM each, or the gpu partition with 10 GPUs total. A short partition serves quick tests and debugging with a shorter walltime. All nodes share BeeGFS storage over 100 Gb InfiniBand." class="figure mx-auto d-block"><div class="figcaption">How Sagehen’s partitions fit into the cluster:
-the head node dispatches jobs to the amd and gpu partitions, with the
-short partition for quick tests.</div>
+<figure><img src="fig/01-cluster-architecture.png" alt="Diagram of the Sagehen HPC cluster. Researchers connect via SSH or the OnDemand web portal to the head node, which dispatches jobs via sbatch or srun to the amd partition of 12 compute nodes with 128 AMD EPYC cores and 500 GB RAM each, or the gpu partition with 10 GPUs total. A short partition serves quick tests and debugging with a shorter walltime. All nodes share BeeGFS storage over 100 Gb InfiniBand." class="figure mx-auto d-block"><div class="figcaption">How Sagehen HPC’s partitions fit into the
+cluster: the head node dispatches jobs to the amd and gpu partitions,
+with the short partition for quick tests.</div>
 </figure><hr>
 <h3 id="06-cluster-architecture-figure-2">Figure 2</h3>
 <p aria-hidden="true">Image 1 of 1: ‘Terminal output of two sinfo commands on Sagehen. The partition view lists amd and gpu with a 30-day time limit and short with a 2-hour limit. The node view lists a001 through a012 with 128 CPUs and roughly 512 GB of memory each, plus five gpu nodes, one of which is down.’</p>
@@ -485,15 +485,15 @@ compute node.</div>
 </figure><hr></section><section id="07-nodes-and-partitions"><h2 class="section-heading"><a href="07-nodes-and-partitions.html">Understanding Nodes and Partitions</a></h2>
 <hr class="half-width">
 <h3 id="07-nodes-and-partitions-figure-1">Figure 1</h3>
-<p aria-hidden="true">Image 1 of 1: ‘Three-column comparison of Sagehen partitions. The amd default partition has 12 nodes a001 through a012 with 128 AMD EPYC cores and 500 GB RAM per node, a max walltime of 720 hours or 30 days, and is best for long CPU jobs, simulations, data processing, and multi-node MPI. The gpu partition has 10 GPUs: four A100 80 GB, four L40S 48 GB, and two RTX PRO 6000 96 GB, with a max walltime of 720 hours, best for machine learning, CUDA code, and GPU-accelerated computing. The short partition is for quick jobs and debugging with a shorter max walltime; check sinfo -p short.’</p>
-<figure><img src="fig/07-partition-comparison.png" alt="Three-column comparison of Sagehen partitions. The amd default partition has 12 nodes a001 through a012 with 128 AMD EPYC cores and 500 GB RAM per node, a max walltime of 720 hours or 30 days, and is best for long CPU jobs, simulations, data processing, and multi-node MPI. The gpu partition has 10 GPUs: four A100 80 GB, four L40S 48 GB, and two RTX PRO 6000 96 GB, with a max walltime of 720 hours, best for machine learning, CUDA code, and GPU-accelerated computing. The short partition is for quick jobs and debugging with a shorter max walltime; check sinfo -p short." class="figure mx-auto d-block"><div class="figcaption">Side-by-side comparison of the three partitions
+<p aria-hidden="true">Image 1 of 1: ‘Three-column comparison of Sagehen HPC partitions. The amd default partition has 12 nodes a001 through a012 with 128 AMD EPYC cores and 500 GB RAM per node, a max walltime of 720 hours or 30 days, and is best for long CPU jobs, simulations, data processing, and multi-node MPI. The gpu partition has 10 GPUs: four A100 80 GB, four L40S 48 GB, and two RTX PRO 6000 96 GB, with a max walltime of 720 hours, best for machine learning, CUDA code, and GPU-accelerated computing. The short partition is for quick jobs and debugging with a shorter max walltime; check sinfo -p short.’</p>
+<figure><img src="fig/07-partition-comparison.png" alt="Three-column comparison of Sagehen HPC partitions. The amd default partition has 12 nodes a001 through a012 with 128 AMD EPYC cores and 500 GB RAM per node, a max walltime of 720 hours or 30 days, and is best for long CPU jobs, simulations, data processing, and multi-node MPI. The gpu partition has 10 GPUs: four A100 80 GB, four L40S 48 GB, and two RTX PRO 6000 96 GB, with a max walltime of 720 hours, best for machine learning, CUDA code, and GPU-accelerated computing. The short partition is for quick jobs and debugging with a shorter max walltime; check sinfo -p short." class="figure mx-auto d-block"><div class="figcaption">Side-by-side comparison of the three partitions
 and what each is best for.</div>
 </figure><hr></section><section id="08-software-modules"><h2 class="section-heading"><a href="08-software-modules.html">Software Modules Basics</a></h2>
 <hr class="half-width">
 <h3 id="08-software-modules-figure-1">Figure 1</h3>
 <p aria-hidden="true">Image 1 of 1: ‘Terminal output of module avail on Sagehen showing a long multi-column list of software modules under /opt/linux/rocky/8/modulefile, including anaconda3, cuda, matlab, openmpi, r, and three miniconda3 versions with py313_26.3.2-2 marked as the default.’</p>
 <figure><img src="fig/08-module-avail-output.png" alt="Terminal output of module avail on Sagehen showing a long multi-column list of software modules under /opt/linux/rocky/8/modulefile, including anaconda3, cuda, matlab, openmpi, r, and three miniconda3 versions with py313_26.3.2-2 marked as the default." class="figure mx-auto d-block"><div class="figcaption">The real <code>module avail</code> listing on
-Sagehen — miniconda3’s versions are in the middle column, with
+Sagehen HPC — miniconda3’s versions are in the middle column, with
 <code>(D)</code> marking the default.</div>
 </figure><hr>
 <h3 id="08-software-modules-figure-2">Figure 2</h3>
@@ -586,14 +586,14 @@ Note it comes from the its-hpcmbx mailbox; don’t reply to it.</div>
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "Pomona College, HPC, research computing, Sagehen, cluster computing, job scheduling, modules",
+  "keywords": "Pomona College, HPC, research computing, Sagehen HPC, cluster computing, job scheduling, modules",
   "name": "All Images",
   "creativeWorkStatus": "active",
   "url": "https://pomona-college.github.io/hpc-intro/images.html",
   "identifier": "https://pomona-college.github.io/hpc-intro/images.html",
   "dateCreated": "2025-03-06",
-  "dateModified": "2026-08-26",
-  "datePublished": "2026-08-26"
+  "dateModified": "2026-08-27",
+  "datePublished": "2026-08-27"
 }
 
   </script><script>
