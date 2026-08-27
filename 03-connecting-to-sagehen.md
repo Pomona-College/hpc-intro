@@ -1,5 +1,5 @@
 ---
-title: "Connecting to Sagehen"
+title: "Connecting to Sagehen HPC"
 teaching: 20
 exercises: 10
 ---
@@ -149,7 +149,7 @@ Or press Ctrl+D.
 3. **SSH keys**: Ed25519 is recommended; RSA-4096 is acceptable
 4. **DUO is required**: You cannot bypass two-factor authentication
 
-![The three layers that protect your Sagehen account: a strong password, DUO MFA, and SSH keys.](fig/auth-stack.png){alt='Diagram of the secure authentication stack. Three stacked layers: Strong Password with 14 or more characters per NIST SP 800-63B and length over complexity; DUO MFA two-factor authentication at duo.pomona.edu; and SSH Keys with Ed25519 preferred, RSA-4096 acceptable, and an encrypted passphrase required. The layers converge to Secure Access to the Sagehen HPC cluster.'}
+![The three layers that protect your Sagehen HPC account: a strong password, DUO MFA, and SSH keys.](fig/auth-stack.png){alt='Diagram of the secure authentication stack. Three stacked layers: Strong Password with 14 or more characters per NIST SP 800-63B and length over complexity; DUO MFA two-factor authentication at duo.pomona.edu; and SSH Keys with Ed25519 preferred, RSA-4096 acceptable, and an encrypted passphrase required. The layers converge to Secure Access to the Sagehen HPC cluster.'}
 
 :::::::::::::::::::::::::::::::::::::::::::::::
 

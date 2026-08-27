@@ -2,7 +2,7 @@
 title: Setup
 ---
 
-## Getting Started with Sagehen
+## Getting Started with Sagehen HPC
 
 This workshop assumes you have access to Sagehen, Pomona College's research computing cluster. By the end of this setup process, you'll have everything needed to connect and run your first job.
 

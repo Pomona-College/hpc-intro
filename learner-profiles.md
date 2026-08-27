@@ -23,7 +23,7 @@ Maya is a first-year graduate student in molecular biology. Her research involve
 - Her datasets are growing: 50+ GB genomic sequences
 - Current analysis takes 2-3 weeks on her laptop
 - Needs to run hundreds of sequence comparisons
-- Her advisor suggested she learn to use Sagehen
+- Her advisor suggested she learn to use Sagehen HPC
 
 ### Her Goals
 - Get her analysis running 10x faster

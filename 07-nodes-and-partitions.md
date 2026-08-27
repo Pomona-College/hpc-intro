@@ -28,7 +28,7 @@ exercises: 10
 
 - **Node**: A complete computer with its own memory, storage, and processors
 - **Socket**: A physical CPU processor installed in a node
-- **Core**: An individual processing unit within a socket (128 per node on Sagehen)
+- **Core**: An individual processing unit within a socket (128 per node on Sagehen HPC)
 - **Thread**: A logical processing unit (some CPUs support hyperthreading)
 
 ```
@@ -80,7 +80,7 @@ Over-requesting hurts other users waiting in the queue.
 2. **Quick test, debug, or short prototype run?** -> Use the **short** partition (shorter walltime limit, check `sinfo -p short`)
 3. **Everything else (production CPU jobs)** -> Use the **amd** partition
 
-![Side-by-side comparison of the three partitions and what each is best for.](fig/07-partition-comparison.png){alt='Three-column comparison of Sagehen partitions. The amd default partition has 12 nodes a001 through a012 with 128 AMD EPYC cores and 500 GB RAM per node, a max walltime of 720 hours or 30 days, and is best for long CPU jobs, simulations, data processing, and multi-node MPI. The gpu partition has 10 GPUs: four A100 80 GB, four L40S 48 GB, and two RTX PRO 6000 96 GB, with a max walltime of 720 hours, best for machine learning, CUDA code, and GPU-accelerated computing. The short partition is for quick jobs and debugging with a shorter max walltime; check sinfo -p short.'}
+![Side-by-side comparison of the three partitions and what each is best for.](fig/07-partition-comparison.png){alt='Three-column comparison of Sagehen HPC partitions. The amd default partition has 12 nodes a001 through a012 with 128 AMD EPYC cores and 500 GB RAM per node, a max walltime of 720 hours or 30 days, and is best for long CPU jobs, simulations, data processing, and multi-node MPI. The gpu partition has 10 GPUs: four A100 80 GB, four L40S 48 GB, and two RTX PRO 6000 96 GB, with a max walltime of 720 hours, best for machine learning, CUDA code, and GPU-accelerated computing. The short partition is for quick jobs and debugging with a shorter max walltime; check sinfo -p short.'}
 
 ### Resource Limits
 

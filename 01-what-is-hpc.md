@@ -8,7 +8,7 @@ exercises: 5
 
 - What is high-performance computing (HPC)?
 - What is a cluster and how is it different from my laptop?
-- What is Sagehen?
+- What is Sagehen HPC?
 
 ::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -33,13 +33,13 @@ High-performance computing refers to using multiple powerful computers (nodes) t
 5. **Professional Administration**: Dedicated IT staff manage hardware, software, security, and backups
 6. **Reproducibility**: Jobs run the same way every time, independent of what else is running
 
-## Introducing Sagehen
+## Introducing Sagehen HPC
 
 **Sagehen** (sagehen.hpc.pomona.edu) is Pomona College's research computing cluster. Named after a bird native to California's Sierra Nevada, Sagehen brings powerful computing resources to Pomona's research community.
 
-![Sagehen's architecture: researchers connect through the head node, which dispatches jobs to the compute and GPU partitions, all sharing BeeGFS storage over 100 Gb InfiniBand.](fig/01-cluster-architecture.png){alt='Diagram of the Sagehen HPC cluster. Researchers connect via SSH or the OnDemand web portal to the head node, sagehen.hpc.pomona.edu, which is for login and job submission only. Jobs are dispatched via sbatch or srun to the amd partition of 12 compute nodes with 128 AMD EPYC cores and 500 GB RAM each, or to the gpu partition with 10 GPUs total. A short partition serves quick tests and debugging. All nodes connect over 100 Gb InfiniBand to shared BeeGFS storage: /rhome, /bigdata, and /scratch.'}
+![Sagehen HPC's architecture: researchers connect through the head node, which dispatches jobs to the compute and GPU partitions, all sharing BeeGFS storage over 100 Gb InfiniBand.](fig/01-cluster-architecture.png){alt='Diagram of the Sagehen HPC cluster. Researchers connect via SSH or the OnDemand web portal to the head node, sagehen.hpc.pomona.edu, which is for login and job submission only. Jobs are dispatched via sbatch or srun to the amd partition of 12 compute nodes with 128 AMD EPYC cores and 500 GB RAM each, or to the gpu partition with 10 GPUs total. A short partition serves quick tests and debugging. All nodes connect over 100 Gb InfiniBand to shared BeeGFS storage: /rhome, /bigdata, and /scratch.'}
 
-### Who Should Use Sagehen?
+### Who Should Use Sagehen HPC?
 
 Sagehen is available to:
 

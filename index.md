@@ -4,7 +4,7 @@ title: Introduction to HPC Systems
 
 ## Welcome to Workshop 0: Introduction to HPC Systems
 
-This workshop is your gateway to high-performance computing at Pomona College. Whether you're a first-time HPC user or transitioning from personal computers to cluster computing, this introductory workshop will guide you through everything you need to know to begin using **Sagehen**, our powerful research computing cluster.
+This workshop is your gateway to high-performance computing at Pomona College. Whether you're a first-time HPC user or transitioning from personal computers to cluster computing, this introductory workshop will guide you through everything you need to know to begin using **Sagehen HPC**, our powerful research computing cluster.
 
 ### What You'll Learn
 
@@ -17,7 +17,7 @@ By the end of this workshop, you will be able to:
 - Use the module system to load and manage software packages
 - Submit and monitor your first computational job
 
-### About Sagehen
+### About Sagehen HPC
 
 **Sagehen** (sagehen.hpc.pomona.edu) is Pomona College's research computing cluster managed by Information Technology Services (ITS). It features:
 

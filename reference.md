@@ -2,7 +2,7 @@
 title: 'Quick Reference'
 ---
 
-## Sagehen Quick Reference Card
+## Sagehen HPC Quick Reference Card
 
 ### Connection & Access
 
@@ -189,7 +189,7 @@ alias du-home='du -sh ~'
 | Pomona IT general | (909) 621-8061 / servicedesk@pomona.edu |
 | This workshop | Ask your instructor |
 
-### Sagehen Hardware Summary
+### Sagehen HPC Hardware Summary
 
 **Compute Nodes (amd partition):**
 - 12 nodes (a001-a012)
@@ -218,7 +218,7 @@ alias du-home='du -sh ~'
 
 ### More Information
 
-- [Sagehen cluster documentation](https://www.pomona.edu/its/)
+- [Sagehen HPC cluster documentation](https://www.pomona.edu/its/)
 - [SLURM documentation](https://slurm.schedmd.com/)
 - [Lmod module system](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod)
 - Episode 9: Running Your First Job for the detailed sbatch tutorial

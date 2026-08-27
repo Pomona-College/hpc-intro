@@ -29,7 +29,7 @@ Workshop 0 is designed as an introductory workshop for researchers with no prior
 
 **Learning Objectives:**
 - Students understand when and why HPC is useful
-- Students know Sagehen's basic architecture
+- Students know Sagehen HPC's basic architecture
 - Students distinguish between head nodes and compute nodes
 
 **Key Concepts:**
@@ -56,7 +56,7 @@ Workshop 0 is designed as an introductory workshop for researchers with no prior
 
 **Checkpoint:** Students should be able to articulate why their research needs HPC.
 
-### Episode 3: Connecting to Sagehen (30 min teaching + 20 min exercises)
+### Episode 3: Connecting to Sagehen HPC (30 min teaching + 20 min exercises)
 
 **Learning Objectives:**
 - Students successfully SSH to Sagehen
